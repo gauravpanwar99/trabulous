@@ -72,7 +72,7 @@
 					true
 				);
 				?>
-				<!-- <a href="#" class="gp-footer-social">
+				<a href="#" class="gp-footer-social">
 					<i class="bi bi-facebook"></i> Facebook
 				</a>
 
@@ -127,24 +127,24 @@
 				<span class="gp-footer-separator"></span>
 				<a href="#" class="gp-footer-social">
 					<i class="bi bi-whatsapp"></i> WhatsApp
-				</a> -->
+				</a>
 			</div>
 		</div>
 		<div class="row py-5">
 			<div class="col-md-6">
 				<h2 class="gp-footer-heading">
-					Can't wait to <span>celebrate</span> your wedding
+					Can't wait to <span>celebrate</span> your trips
 				</h2>
 				<div class="gp-footer-cta-buttons">
 					<a href="mailto:hello@example.com" class="gp-btn-outline-wine">
-						hello@idoabroad.com
+						hello@trabulous.com
 					</a>
 					<a href="tel:+1234567890" class="gp-btn-wine">
 						+1 234 567 890
 					</a>
 				</div>
 				<div class="gp-footer-secondary-links">
-					<a href="#">Vendors</a>
+					<a href="#">Destinations</a>
 					<a href="#">FAQs</a>
 					<a href="#">How It Works</a>
 				</div>
@@ -154,8 +154,8 @@
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">Quick Links</h3>
 						<ul class="gp-footer-menu">
-							<li><a href="#">Wedding by Location</a></li>
-							<li><a href="#">Wedding by Style</a></li>
+							<li><a href="#">Trips By Locations</a></li>
+							<li><a href="#">Trips by Style</a></li>
 							<li><a href="#">Inspiration</a></li>
 							<li><a href="#">Ad Listing</a></li>
 						</ul>
@@ -174,7 +174,7 @@
 		</div>
 		<div class="row">
 			<div class="col-12 text-center gp-footer-copyright">
-				© 2025 I Do. All rights reserved.
+				© 2025 Trabulous. All rights reserved.
 			</div>
 		</div>
 	</div>

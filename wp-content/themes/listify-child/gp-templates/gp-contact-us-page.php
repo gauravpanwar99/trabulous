@@ -56,17 +56,17 @@ get_header();
                 <div class="col-md-5">
                     <div class="gp-contact-info-box">
 
-                        <h3>Why Couples Choose Us</h3>
+                        <h3>Why People Choose Us</h3>
 
                         <ul class="gp-contact-points">
-                            <li><i class="bi bi-check-circle"></i> Curated venues worldwide</li>
+                            <li><i class="bi bi-check-circle"></i> Curated Destinations worldwide</li>
                             <li><i class="bi bi-check-circle"></i> Verified local partners</li>
-                            <li><i class="bi bi-check-circle"></i> Response within 48 hours</li>
+                            <li><i class="bi bi-check-circle"></i> Response within 2 hours</li>
                         </ul>
 
                         <div class="gp-contact-direct">
                             <p>
-                                <i class="bi bi-envelope"></i> hello@idoabroad.com
+                                <i class="bi bi-envelope"></i> hello@trabulous.com
                             </p>
                             <p>
                                 <i class="bi bi-telephone"></i> +1 234 567 890
@@ -85,7 +85,7 @@ get_header();
                                     false
                                 );
                                 ?>
-                                <!-- <a href="#" class="gp-contact-social">
+                                <a href="#" class="gp-contact-social">
                                     <i class="bi bi-facebook"></i>
                                 </a>
 
@@ -111,7 +111,7 @@ get_header();
 
                                 <a href="#" class="gp-contact-social">
                                     <i class="bi bi-whatsapp"></i>
-                                </a> -->
+                                </a>
 
                             </div>
 
