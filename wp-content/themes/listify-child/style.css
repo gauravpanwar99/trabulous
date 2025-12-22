@@ -1,0 +1,1814 @@
+/*
+Theme Name:     Listify Child
+Theme URI:      https://astoundify.com/products/listify/
+Template:       listify
+Version:        1.0
+*/
+.job-listing-description {
+    border: 1px solid #eee;
+    padding: 50px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.job-listing-description h6,
+.job-listing-description h5,
+.job-listing-description h4,
+.job-listing-description h3,
+.job-listing-description h2,
+.job-listing-description h1 {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.job-listing-description p {
+    margin: 0px;
+}
+
+.type-job_listing.style-grid .job_listing-entry-header-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.type-job_listing.style-grid .job_listing-entry-header {
+    height: auto;
+}
+
+.type-job_listing.style-grid .feature_image_card {
+    max-height: 310px;
+    min-height: 310px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f5f5f5;
+    transition: all 0.4s ease-in-out;
+}
+
+.type-job_listing.style-grid:hover .feature_image_card {
+    background-color: #000;
+}
+
+.type-job_listing.style-grid .feature_image_card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 0.4s ease-in-out;
+}
+
+.type-job_listing.style-grid:hover .feature_image_card img {
+    padding: 8px;
+    opacity: 0.8;
+}
+
+.type-job_listing.style-grid .job_listing-entry-meta {
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+}
+
+.listing-featured-icon,
+.style-grid .listing-featured-badge {
+    position: absolute;
+    top: 280px;
+    left: 10px;
+}
+
+.listing-featured-icon img {
+    max-width: 30px;
+    height: 30px;
+}
+
+ul.job_listings {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.type-job_listing.style-grid .job_listing-entry-footer {
+    position: absolute;
+    top: 45px;
+    right: 0;
+}
+
+li.type-job_listing .listing-entry-company-image~.claimed-ribbon span:after {
+    top: 0;
+    left: 0;
+}
+
+li.type-job_listing.style-grid .job_listing-entry-footer .claimed-ribbon {
+    top: -35px;
+    z-index: 99;
+}
+
+li.type-job_listing.style-grid .job_listing-entry-footer .claimed-ribbon.company-image-claimed-ribbon {
+    top: -25px;
+}
+
+.job_listing-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+    .type-job_listing.style-grid .job_listing-entry-header {
+        padding: 0;
+    }
+}
+
+
+/**
+Custom GP STYLES Start Here
+*/
+
+
+/* =========================
+   GP DESIGN TOKENS
+========================= */
+
+:root {
+    /* ===== Brand Greens ===== */
+    --gp-green-primary: #086019;
+    /* Logo / accents */
+    --gp-green-heading: #0B6B2B;
+    /* Headings */
+    --gp-green-light: #84baa0;
+    --gp-green-light-bg-weddify: rgba(185, 210, 176, 1);
+    /* Header / soft bg */
+
+    /* ===== Secondary Wine ===== */
+    --gp-wine-dark: #5C263F;
+    /* CTA / emphasis */
+    --gp-wine-light: rgba(247, 191, 180, 0.2);
+    --gp-wine-light-bg-weddify: #FCEDF1;
+    /* Soft bg */
+
+    /* ===== Text ===== */
+    --gp-text-primary: #222222;
+    --gp-text-secondary: #555555;
+    --gp-text-light: #ffffff;
+
+    /* ===== Backgrounds ===== */
+    --gp-bg-light: #ffffff;
+    --gp-bg-grey: #f7f7f7;
+    --gp-bg-soft-green: rgba(132, 186, 160, 0.15);
+    --gp-bg-soft-wine: rgba(247, 191, 180, 0.2);
+
+    /* ===== Borders ===== */
+    --gp-border-light: #e5e5e5;
+    --gp-border-dark: #cccccc;
+
+    /* Status / Labels */
+    --gp-success: #2E7D32;
+    --gp-warning: #ED6C02;
+    --gp-info: #0288D1;
+
+    --gp-accent-gold: #E8B04A;
+    --gp-accent-blue: #3A6EA5;
+
+
+}
+
+
+
+/* =========================
+   GP TYPOGRAPHY SYSTEM
+========================= */
+
+body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--gp-text-primary);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.gp-heading {
+    font-family: 'Merriweather', serif;
+    /* color: var(--gp-wine-dark); */
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--gp-green-heading);
+}
+
+
+/* Main Navigation */
+.gp-custom-header .nav-menu.primary li a:hover {}
+
+.nav-menu li,
+ul.nav-menu li {
+    margin-right: 20px;
+}
+
+.gp-custom-header .nav-menu.primary a,
+.nav-menu.primary li:before,
+.nav-menu.primary li:after,
+.nav-menu.primary a:before,
+.nav-menu.primary a:after {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+.main-navigation,
+.main-navigation a,
+.gp-main-menu {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Buttons & CTAs */
+.gp-cta-button,
+button,
+input[type="submit"] {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.gp-cta-button {
+    background: var(--gp-green-primary);
+    color: var(--gp-text-light);
+}
+
+.gp-cta-button-secondary {
+    background: var(--gp-wine-dark);
+    color: var(--gp-text-light);
+}
+
+.gp-cta-button-secondary-outline {
+    background: var(--gp-wine-light);
+    color: var(--gp-wine-dark);
+}
+
+
+
+
+/* =========================
+   GP GLOBAL LAYOUT
+========================= */
+
+.gp-section {
+    padding: 40px 0;
+}
+
+.gp-section-sm {
+    padding: 40px 0;
+}
+
+.gp-container-narrow {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gp-container-wide {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* =========================
+   GP BUTTON SYSTEM
+========================= */
+
+.gp-cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--gp-primary);
+    color: var(--gp-text-light);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.gp-cta-button:hover {
+    background: var(--gp-secondary);
+    color: var(--gp-text-primary);
+}
+
+
+/* =========================
+   GP CARD BASE
+========================= */
+
+.gp-card {
+    background: var(--gp-bg-light);
+    border: 1px solid var(--gp-border-light);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gp-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   GP UTILITIES
+========================= */
+
+.gp-text-center {
+    text-align: center;
+}
+
+.gp-text-right {
+    text-align: right;
+}
+
+.gp-mt-20 {
+    margin-top: 20px;
+}
+
+.gp-mb-40 {
+    margin-bottom: 40px;
+}
+
+.gp-hidden {
+    display: none;
+}
+
+.bi {
+    font-size: 0.8rem;
+    color: var(--gp-text-secondary);
+    /* grayscale default */
+}
+
+.gp-icon-primary {
+    color: var(--gp-green-primary);
+}
+
+.gp-icon-wine {
+    color: var(--gp-wine-dark);
+}
+
+
+
+
+/* =========================
+   GP – HEADER
+========================= */
+
+.gp-custom-header {}
+
+.gp-custom-header .primary-header {
+    background: var(--gp-green-light);
+    box-shadow: none;
+    border-bottom: 1px solid var(--gp-border-light);
+}
+
+.gp-custom-header-image {
+    max-width: 180px;
+    height: 130px;
+}
+
+
+/* =========================
+   GP – COMMON
+========================= */
+.gp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gp-cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* =========================
+   GP – SINGLE VENUE
+========================= */
+.gp-single-venue {}
+
+.gp-venue-banner {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.gp-venue-banner-inner {
+    display: flex;
+    gap: 40px;
+}
+
+.gp-venue-banner-content {
+    flex: 1;
+}
+
+.gp-venue-banner-form {
+    flex: 1;
+}
+
+/* =========================
+   GP – ARCHIVE & TAXONOMY
+========================= */
+.gp-venue-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gp-venue-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.gp-archive-body,
+.gp-taxonomy-body {
+    padding: 60px 0;
+}
+
+.gp-archive-sidebar,
+.gp-taxonomy-sidebar {
+    width: 25%;
+}
+
+.gp-archive-listing,
+.gp-taxonomy-listing {
+    width: 75%;
+}
+
+
+
+
+
+
+/* =========================
+   GP – LANDING PAGE
+========================= */
+.gp-landing-page {}
+
+/* =========================
+   HERO SECTION
+========================= */
+.gp-landing-hero {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.gp-landing-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.gp-landing-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.gp-landing-hero-content {
+    flex: 1;
+}
+
+.gp-landing-hero-form {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+.gp-landing-hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.gp-landing-hero-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.gp-section-header {
+    margin-bottom: 40px;
+}
+
+.gp-section-title {
+    font-size: 32px;
+}
+
+/* =========================
+   FEATURED WEEKLY COLLECTION
+========================= */
+.gp-featured-weekly-section {
+    padding: 80px 0;
+}
+
+.gp-featured-weekly-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.gp-featured-card {
+    height: 300px;
+    background: #f2f2f2;
+    border-radius: 6px;
+}
+
+/* =========================
+   FULL WIDTH IMAGE ROW
+========================= */
+.gp-fullwidth-image-row {
+    position: relative;
+    min-height: 400px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+}
+
+.gp-fullwidth-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.gp-fullwidth-image-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.gp-fullwidth-image-title {
+    font-size: 36px;
+}
+
+/* =========================
+   CURATED COLLECTION
+========================= */
+.gp-curated-collection-section {
+    padding: 80px 0;
+}
+
+.gp-curated-collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+
+
+/* =========================
+   GP LANDING PAGE STARTS HERE
+========================= */
+
+
+/* =========================
+   GP HERO BANNER
+========================= */
+
+.gp-hero-banner {
+    position: relative;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.gp-hero-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.gp-hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--gp-text-light);
+    padding: 60px 20px;
+}
+
+/* Headings */
+.gp-hero-title {
+    font-size: 3.2rem;
+    color: var(--gp-text-light);
+    margin-bottom: 20px;
+}
+
+.gp-hero-subtitle {
+    visibility: hidden;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+}
+
+/* =========================
+   HERO FORM
+========================= */
+
+.gp-hero-banner-form {
+    display: flex;
+    justify-content: center;
+}
+
+.gp-hero-search-form {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Fields */
+.gp-hero-form-field {
+    padding: 5px 30px;
+    position: relative;
+}
+
+.gp-hero-form-field:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 60%;
+    width: 1px;
+    background: var(--gp-border-light);
+}
+
+.gp-hero-form-field .select::after {
+    color: var(--gp-text-primary);
+    position: absolute;
+    top: 10px;
+}
+
+/* Inputs */
+.gp-hero-form-field select,
+.gp-hero-form-field input {
+    border: none;
+    outline: none;
+    height: 60px;
+    font-family: 'Jost', sans-serif;
+    font-size: 1.2rem;
+    color: var(--gp-text-primary);
+    background: transparent;
+}
+
+/* Submit Button */
+.gp-hero-form-submit button {
+    height: 75px;
+    width: 170px;
+    border: none;
+    background: var(--gp-wine-dark);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gp-hero-form-submit button:hover {
+    background: var(--gp-green-primary);
+}
+
+/* =========================
+   GP HERO OVERLAY
+========================= */
+
+.gp-hero-overlay {
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, 0.75); */
+    /* Adjustable */
+    z-index: 1;
+}
+
+
+.gp-hero-title {
+    font-size: 2.5rem;
+    color: var(--gp-text-light);
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+}
+
+.gp-hero-title span {
+    display: block;
+    color: var(--gp-text-light);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 10px;
+    /* color: rgba(255, 255, 255, 0.85); */
+}
+
+.gp-hero-form-submit i {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+/* =========================
+   FEATURED VENUES SECTION
+========================= */
+
+.gp-featured-eyebrow {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gp-text-secondary);
+    padding-bottom: 20px;
+}
+
+.gp-featured-main-title {
+    margin: 20px 0 20px;
+    color: var(--gp-wine-dark);
+}
+
+/* Toggle Buttons */
+.gp-featured-toggle-buttons {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.gp-toggle-btn {
+    padding: 10px 22px;
+    border: 2px solid var(--gp-wine-dark);
+    background: transparent;
+    color: var(--gp-wine-dark);
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gp-toggle-active {
+    background: var(--gp-wine-dark);
+    color: #fff;
+}
+
+/* =========================
+   CARD – HOMEPAGE
+========================= */
+
+.gp-card-container-homepage {
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+/* Image */
+.gp-card-image {
+    position: relative;
+}
+
+.gp-card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Badges */
+.gp-card-badges {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.gp-badge {
+    background: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gp-wine-dark);
+}
+
+/* Title */
+.gp-card-title {
+    padding: 10px 18px;
+    height: 88px;
+}
+
+.gp-card-title h3,
+.gp-card-title h3 a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--gp-wine-dark);
+    text-decoration: none;
+}
+
+p.gp-card-subtitle {
+    padding: 0px 18px;
+    font-size: 14px;
+    min-height: 80px;
+}
+
+/* Meta Rows */
+.gp-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    font-size: 0.85rem;
+}
+
+.gp-card-divider {
+    width: 1px;
+    height: 18px;
+    background: #ddd;
+    margin: 0 12px;
+}
+
+.gp-card-meta-top,
+.gp-card-meta-bottom {
+    border-bottom: 1px solid #eee;
+    height: 45px;
+    overflow: hidden;
+}
+
+/* CTA */
+.gp-card-cta {
+    display: none;
+    padding: 15px 18px;
+}
+
+.gp-card-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    border: 2px solid var(--gp-wine-dark);
+    color: var(--gp-wine-dark);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.gp-card-btn:hover {
+    background: var(--gp-wine-dark);
+    color: #fff;
+}
+
+/* Response */
+.gp-card-response {
+    padding: 10px 18px 18px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--gp-text-secondary);
+}
+
+/* =========================
+   GP SPLIT SECTION
+========================= */
+
+.gp-split-section {
+    position: relative;
+}
+
+/* Top Image Half */
+.gp-split-image {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Bottom Blank Half */
+.gp-split-blank {
+    height: 20vh;
+    background: #ffffff;
+}
+
+/* Content Wrapper (Overlap) */
+.gp-split-content-wrapper {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 2;
+}
+
+/* Content Box */
+.gp-split-content {
+    background: var(--gp-bg-grey);
+    padding: 60px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   SPLIT SECTION CONTENT
+========================= */
+
+.gp-split-title {
+    color: var(--gp-green-heading);
+    margin-bottom: 10px;
+}
+
+.gp-split-subtitle {
+    color: var(--gp-wine-dark);
+    margin-bottom: 20px;
+}
+
+.gp-split-description {
+    color: var(--gp-text-secondary);
+    margin-bottom: 30px;
+}
+
+/* Actions Row */
+.gp-split-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Button */
+.gp-split-btn {
+    padding: 12px 28px;
+    background: var(--gp-wine-dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+/* Phone Icon */
+.gp-split-phone {
+    width: 48px;
+    height: 48px;
+    background: var(--gp-wine-dark);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gp-split-phone .bi-telephone-fill {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/* Phone Text */
+.gp-split-phone-text {
+    font-weight: 600;
+    color: var(--gp-wine-dark);
+}
+
+/* Right Image */
+.gp-split-side-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
+   GP INSPIRATION LABELS
+========================= */
+
+.gp-landing-listing-labels-containers {
+    background: #ffffff;
+    margin-top: 80px;
+}
+
+.gp-inspiration-title {
+    color: var(--gp-wine-dark);
+}
+
+.gp-inspiration-card {
+    position: relative;
+    height: 380px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gp-inspiration-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.gp-inspiration-heading {
+    position: relative;
+    color: #ffffff;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   GP BLOG SECTION
+========================= */
+
+.gp-landing-blog-section {
+    background: var(--gp-bg-grey);
+}
+
+.gp-blog-title {
+    color: var(--gp-wine-dark);
+}
+
+.gp-blog-subtitle {
+    color: var(--gp-text-secondary);
+}
+
+.gp-blog-card {
+    background: #ffffff;
+    padding: 20px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gp-blog-image img {
+    width: 100%;
+    height: auto;
+}
+
+.gp-blog-meta,
+.gp-blog-meta span,
+.gp-blog-meta a {
+    font-size: 13px;
+    color: var(--gp-text-muted);
+    margin: 10px 0;
+}
+
+.gp-blog-card-title,
+.gp-blog-card-title a {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--gp-wine-dark);
+}
+
+.gp-blog-excerpt {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.gp-blog-readmore {
+    color: var(--gp-wine-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gp-blog-view-more {
+    padding: 12px 30px;
+    border: 2px solid var(--gp-wine-dark);
+    color: var(--gp-wine-dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+/**
+Blog
+*/
+
+
+.blog-cards-landing-page {
+    margin-top: 40px;
+}
+
+
+.gp-landing-idoabroad-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* ========================
+   GP LANDING PAGE ENDS HERE
+========================= */
+
+
+/* ========================
+   GP BLOG PAGE STARTS HERE
+========================= */
+
+.gp-side-content .page-title,
+.gp-side-content .job_listing-title {
+    font-family: 'Merriweather', serif;
+    color: var(--gp-wine-dark);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.gp-post-container,
+.gp-single-job-listing-container {
+    margin-top: 40px;
+}
+
+
+.gp-side-content .gp-single-job-listing-container h1,
+.gp-side-content .gp-single-job-listing-container h2,
+.gp-side-content .gp-single-job-listing-container h3,
+.gp-side-content .gp-single-job-listing-container h4,
+.gp-side-content .gp-single-job-listing-container h5,
+.gp-side-content .gp-single-job-listing-container h6,
+.gp-side-content .gp-post-container h1,
+.gp-side-content .gp-post-container h2,
+.gp-side-content .gp-post-container h3,
+.gp-side-content .gp-post-container h4,
+.gp-side-content .gp-post-container h5,
+.gp-side-content .gp-post-container h6 {
+    font-family: 'Merriweather', serif;
+    color: var(--gp-wine-dark);
+}
+
+.gp-side-content .gp-post-container a,
+.gp-side-content .gp-single-job-listing-container a,
+.single-job_listing .widget a:not(.button) {
+    /* text-decoration: none; */
+    color: var(--gp-text-primary)
+}
+
+
+/* SIDEBAR */
+
+.gp-custom-sidebar {}
+
+.gp-custom-sidebar form {}
+
+.gp-custom-sidebar form button {
+    padding: 12px 28px;
+    background: var(--gp-wine-dark);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.gp-custom-sidebar form label {
+    display: none;
+}
+
+/* ========================
+   GP BLOG PAGE ENDS HERE
+========================= */
+
+
+
+
+
+
+/* =========================
+   GP FOOTER
+========================= */
+
+.gp-footer {
+    background: var(--gp-green-light);
+    padding-top: 30px;
+}
+
+.gp-footer-social-row {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gp-footer-social-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.gp-footer-social {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gp-footer-separator {
+    width: 1px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.gp-footer-heading {
+    /* color: var(--gp-text-primary); */
+    color: var(--gp-wine-dark);
+    margin-bottom: 25px;
+}
+
+.gp-footer-heading span {
+    color: var(--gp-wine-dark);
+}
+
+.gp-footer-cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.gp-btn-outline-wine {
+    border: 2px solid var(--gp-wine-dark);
+    color: var(--gp-wine-dark);
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gp-btn-wine {
+    background: var(--gp-wine-dark);
+    color: #ffffff;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gp-footer-secondary-links {
+    display: flex;
+    gap: 20px;
+}
+
+.gp-footer-secondary-links a {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+}
+
+.gp-footer-menu-title {
+    color: var(--gp-wine-dark);
+    margin-bottom: 15px;
+}
+
+.gp-footer-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gp-footer-menu li {
+    margin-bottom: 10px;
+}
+
+.gp-footer-menu a {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+}
+
+.gp-footer-copyright {
+    padding: 20px 0;
+    font-size: 14px;
+    color: var(--gp-text-muted);
+}
+
+
+/**GP FOOTER ENDS HERE
+*/
+
+
+/* =========================
+   GP CONTACT PAGE
+========================= */
+
+.gp-contact-hero {
+    position: relative;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.gp-contact-hero .gp-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.gp-hero-title {
+    margin-top: 200px;
+    color: var(--gp-wine-dark);
+    z-index: 2;
+    position: relative;
+}
+
+.gp-hero-subtitle {
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    max-width: 700px;
+    margin: 15px auto 0;
+}
+
+.gp-contact-section {
+    padding: 80px 0;
+}
+
+.gp-contact-form-box {
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.gp-contact-form-box h1,
+.gp-contact-form-box h2,
+.gp-contact-form-box h3,
+.gp-contact-form-box h4,
+.gp-contact-form-box h5,
+.gp-contact-form-box h6,
+.gp-contact-info-box h1,
+.gp-contact-info-box h2,
+.gp-contact-info-box h3,
+.gp-contact-info-box h4,
+.gp-contact-info-box h5,
+.gp-contact-info-box h6 {
+    margin-bottom: 20px;
+    color: var(--gp-wine-dark);
+}
+
+.gp-contact-info-box {
+    background: var(--gp-green-light);
+    padding: 40px;
+    height: 100%;
+}
+
+.gp-contact-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.gp-contact-points li {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.gp-contact-direct p {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTACT PAGE – SOCIAL LINKS
+========================= */
+
+.gp-contact-social-wrapper {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gp-contact-social-title {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: var(--gp-text-primary);
+}
+
+.gp-contact-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.gp-contact-social {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--gp-wine-dark);
+    color: var(--gp-wine-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.gp-contact-social:hover {
+    background: var(--gp-wine-dark);
+    color: #ffffff;
+}
+
+
+/* =========================
+   GP CALL TO ACTION SECTION
+========================= */
+
+.gp-calltoaction-section {
+    background: var(--gp-green-light);
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.gp-cta-text {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--gp-text-primary);
+    max-width: 750px;
+}
+
+.gp-cta-button {
+    padding: 14px 34px;
+    font-size: 16px;
+}
+
+.gp-calltoaction-section .gp-cta-button:hover {
+    background: transparent;
+    color: var(--gp-text-primary);
+    border: 1px solid var(--gp-wine-dark);
+}
+
+
+.gp-venue-hero,
+.gp-venue-body {
+    position: relative;
+    width: 100%;
+}
+
+.gp-venue-hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: flex-end;
+    color: #ffffff;
+}
+
+.gp-venue-hero-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.gp-venue-hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gp-venue-hero .gp-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.gp-venue-hero-content {
+    position: relative;
+    padding-bottom: 60px;
+    z-index: 2;
+}
+
+.gp-venue-title {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.gp-venue-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.95rem;
+}
+
+.gp-venue-meta i {
+    margin-right: 6px;
+    color: var(--gp-secondary-light);
+}
+
+.gp-venue-rating strong {
+    font-weight: 600;
+}
+
+.gp-venue-badges {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.gp-badge {
+    background: #ffffff;
+    color: #222;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gp-badge i {
+    color: var(--gp-secondary-dark);
+}
+
+.gp-venue-body {
+    /* padding: 80px 0; */
+    background: #ffffff;
+}
+
+.gp-venue-main {
+    padding-right: 30px;
+}
+
+.gp-venue-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #222;
+    margin-bottom: 50px;
+}
+
+.gp-venue-description p:last-child {
+    margin-bottom: 0;
+}
+
+.gp-venue-taxonomies {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.gp-tax-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gp-tax-pill {
+    background: rgba(8, 96, 25, 0.08);
+    color: #086019;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.gp-venue-sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.gp-sidebar-card {
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.gp-sidebar-card h4 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.gp-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.gp-btn-primary {
+    background: var(--gp-secondary-dark);
+    color: #ffffff;
+    border: none;
+}
+
+.gp-btn-primary:hover {
+    background: rgb(92, 38, 63);
+    color: #ffffff;
+}
+
+.gp-venue-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.gp-venue-contact i {
+    color: var(--gp-secondary-dark);
+}
+
+.gp-venue-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.gp-venue-socials a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(247, 191, 180, 0.25);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gp-secondary-dark);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.gp-venue-socials a:hover {
+    background: var(--gp-secondary-dark);
+    color: #ffffff;
+}
+
+.gp-venue-sidebar #secondary,
+.gp-venue-sidebar .widget-area {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background: #ffffff; */
+    /* border: 1px solid #eee; */
+    /* padding: 25px; */
+    /* margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    */
+}
+
+.gp-venue-sidebar #secondary aside {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 0;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.gp-venue-sidebar #secondary aside .map-widget-section {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.gp-venue-sidebar #secondary aside h2,
+.gp-venue-sidebar #secondary aside h2 a {
+    /* font-family: 'Merriweather', serif;
+    font-size: 1.2rem; */
+    margin-bottom: 15px;
+    color: var(--gp-wine-dark);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.gp-venue-sidebar #secondary aside .listify-gallery-images {
+    padding: 0;
+}
+
+.gp-tax-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gp-tax-pill i {
+    font-size: 0.85rem;
+    color: var(--gp-secondary-dark);
+}
+
+.gp-tax-title {
+    margin-bottom: 12px;
+}
+
+.gp-tax-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gp-tax-group {
+    display: block !important;
+}
+
+.gp-tax-group h5 {
+    display: block !important;
+    width: 100%;
+}
+
+.gp-tax-group .pills-container {
+    display: flex !important;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.gp-cta-offer-badge {
+    /* background: #f4f6f4; */
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.gp-cta-star {
+    font-size: 28px;
+    color: silver;
+}
+
+.gp-cta-offer-text del {
+    opacity: 0.6;
+}
+
+.gp-cta-price {
+    color: var(--gp-wine-color);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.gp-cta-offer-badge {
+    background-image: url('../listify-child/assets/images/silver-star.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    min-height: 160px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.gp-cta-offer-text {
+    font-weight: 600;
+    color: #222;
+    line-height: 1.3;
+}
+
+.gp-cta-offer-text del {
+    opacity: 0.6;
+}
+
+.gp-cta-price {
+    color: var(--gp-wine-dark);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   GP RESPONSIVE
+========================= */
+
+@media (min-width: 992px) {
+    .nav-menu.primary {
+        text-align: right;
+        padding-left: 3em;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .gp-venue-title {
+        font-size: 2.2rem;
+    }
+
+    .gp-venue-main {
+        padding-right: 0;
+    }
+
+    .gp-venue-sidebar {
+        position: static;
+        margin-top: 40px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    /* .col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  } */
+
+    .gp-venue-sidebar #secondary .gp-venue-sidebar .widget-area {
+        width: 100%;
+        max-width: 100%;
+    }
+}

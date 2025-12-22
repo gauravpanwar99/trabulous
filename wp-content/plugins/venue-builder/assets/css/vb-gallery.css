@@ -1,0 +1,28 @@
+#vb-gallery-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+#vb-gallery-images li {
+    position: relative;
+    cursor: move;
+}
+
+#vb-gallery-images img {
+    width: 80px;
+    height: auto;
+}
+
+#vb-gallery-images .remove {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #c00;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
