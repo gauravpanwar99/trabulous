@@ -4,6 +4,13 @@ Theme URI:      https://astoundify.com/products/listify/
 Template:       listify
 Version:        1.0
 */
+
+
+.gp-custom-logo-link .custom-header img.gp-custom-header-image {
+    max-width: 180px;
+    height: auto;
+}
+
 .job-listing-description {
     border: 1px solid #eee;
     padding: 50px 20px;
@@ -129,11 +136,11 @@ Custom GP STYLES Start Here
 
 :root {
     /* ===== Brand Greens ===== */
-    --gp-green-primary: #16959e4f;
+    --gp-green-primary: #086019;
     /* Logo / accents */
-    --gp-green-heading: #234F9C;
+    --gp-green-heading: #0B6B2B;
     /* Headings */
-    --gp-green-light: #75c6cc;
+    --gp-green-light: #84baa0;
     --gp-green-light-bg-weddify: rgba(185, 210, 176, 1);
     /* Header / soft bg */
 
@@ -167,167 +174,9 @@ Custom GP STYLES Start Here
     --gp-accent-gold: #E8B04A;
     --gp-accent-blue: #3A6EA5;
 
-}
-    /**
-    *    Additional Colors - newly imported
-    */
 
-    /* ===============================
-   Trabulous Travel Theme
-   Bootstrap 5 Compatible
-   =============================== */
-
-:root {
-  /* Primary Brand Colors */
-  --tr-primary: #1F8AA6;      /* Ocean Blue */
-  --tr-secondary: #3BB6A5;    /* Teal Green */
-  --tr-dark: #0E3A4B;         /* Deep Navy */
-  --tr-light: #E6F6F5;        /* Soft Aqua */
-  --tr-sand: #FFF3E0;         /* Sand Beige */
-
-  /* Text Colors */
-  --tr-text-heading: #0E3A4B;
-  --tr-text-body: #2F4F4F;
-  --tr-text-muted: #6B8E99;
-  --tr-text-light: #FFFFFF;
-
-  /* Backgrounds */
-  --tr-bg-main: #FFFFFF;
-  --tr-bg-light: #E6F6F5;
-  --tr-bg-alt: #F4FAF9;
-  --tr-bg-footer: #0E3A4B;
-
-  /* Buttons */
-  --tr-btn-primary-bg: #1F8AA6;
-  --tr-btn-primary-hover: #166F86;
-  --tr-btn-primary-active: #0E3A4B;
-
-  --tr-btn-secondary-bg: #3BB6A5;
-  --tr-btn-secondary-hover: #2FA193;
-
-  --tr-btn-light-bg: #E6F6F5;
-  --tr-btn-light-text: #1F8AA6;
-  --tr-btn-light-border: #1F8AA6;
-
-  /* Borders & Shadows */
-  --tr-border-light: #E0EEEE;
-  --tr-shadow-card: 0 10px 30px rgba(31, 138, 166, 0.15);
-
-  /* Links */
-  --tr-link: #1F8AA6;
-  --tr-link-hover: #166F86;
-
-  /* Radius */
-  --tr-radius-sm: 6px;
-  --tr-radius-md: 10px;
-  --tr-radius-lg: 14px;
 }
 
-
-
-
-/* ===============================
-   Bootstrap Color Overrides
-   =============================== */
-:root {
-  --bs-primary: var(--tr-primary);
-  --bs-secondary: var(--tr-secondary);
-  --bs-dark: var(--tr-dark);
-  --bs-light: var(--tr-light);
-
-  --bs-body-bg: var(--tr-bg-main);
-  --bs-body-color: var(--tr-text-body);
-
-  --bs-link-color: var(--tr-link);
-  --bs-link-hover-color: var(--tr-link-hover);
-
-  --bs-border-color: var(--tr-border-light);
-}
-
-/* ===============================
-   Bootstrap Color Overrides
-   =============================== */
-
-:root {
-  --bs-primary: var(--tr-primary);
-  --bs-secondary: var(--tr-secondary);
-  --bs-dark: var(--tr-dark);
-  --bs-light: var(--tr-light);
-
-  --bs-body-bg: var(--tr-bg-main);
-  --bs-body-color: var(--tr-text-body);
-
-  --bs-link-color: var(--tr-link);
-  --bs-link-hover-color: var(--tr-link-hover);
-
-  --bs-border-color: var(--tr-border-light);
-}
-/* Primary Button */
-.btn-primary {
-  background-color: var(--tr-btn-primary-bg);
-  border-color: var(--tr-btn-primary-bg);
-  border-radius: var(--tr-radius-md);
-}
-
-.btn-primary:hover {
-  background-color: var(--tr-btn-primary-hover);
-  border-color: var(--tr-btn-primary-hover);
-}
-
-/* Secondary Button */
-.btn-secondary {
-  background-color: var(--tr-btn-secondary-bg);
-  border-color: var(--tr-btn-secondary-bg);
-  border-radius: var(--tr-radius-md);
-}
-
-.btn-secondary:hover {
-  background-color: var(--tr-btn-secondary-hover);
-  border-color: var(--tr-btn-secondary-hover);
-}
-
-/* Light / Ghost Button */
-.btn-light {
-  background-color: var(--tr-btn-light-bg);
-  color: var(--tr-btn-light-text);
-  border: 1px solid var(--tr-btn-light-border);
-  border-radius: var(--tr-radius-md);
-}
-
-.btn-light:hover {
-  background-color: var(--tr-primary);
-  color: #fff;
-}
-.card {
-  border-radius: var(--tr-radius-lg);
-  border-color: var(--tr-border-light);
-}
-
-.card:hover {
-  box-shadow: var(--tr-shadow-card);
-}
-
-.section-light {
-  background-color: var(--tr-bg-light);
-}
-
-.section-alt {
-  background-color: var(--tr-bg-alt);
-}
-
-.footer {
-  background-color: var(--tr-bg-footer);
-  color: var(--tr-text-light);
-}
-body {
-  font-family: 'Inter', sans-serif;
-  color: var(--tr-text-body);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
-  color: var(--tr-text-heading);
-}
 
 
 /* =========================
@@ -361,16 +210,16 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--tr-dark);
+    color: var(--gp-green-heading);
 }
 
 
 /* Main Navigation */
-.gp-custom-header .nav-menu.primary li a:hover {}
+
 
 .nav-menu li,
 ul.nav-menu li {
-    margin-right: 20px;
+    margin-right: 8px;
 }
 
 .gp-custom-header .nav-menu.primary a,
@@ -380,7 +229,7 @@ ul.nav-menu li {
 .nav-menu.primary a:after {
     color: var(--gp-text-primary);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
@@ -530,12 +379,14 @@ input[type="submit"] {
 .gp-custom-header .primary-header {
     background: var(--gp-green-light);
     box-shadow: none;
-    border-bottom: 1px solid var(--gp-border-light);
+    border-bottom: 1px solid var(--gp-green-primary);
+    /* box-shadow: 2px 1px 0 var(--gp-green-primary); */
 }
 
-.gp-custom-header-image {
-    max-width: 180px;
+.site-branding .gp-custom-header-image {
+    width: 180px;
     height: 130px;
+    padding: 5px;
 }
 
 
@@ -748,7 +599,7 @@ input[type="submit"] {
 
 .gp-hero-banner {
     position: relative;
-    min-height: 90vh;
+    min-height: 80vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -792,6 +643,7 @@ input[type="submit"] {
 .gp-hero-banner-form {
     display: flex;
     justify-content: center;
+    height: 50px;
 }
 
 .gp-hero-search-form {
@@ -805,7 +657,7 @@ input[type="submit"] {
 
 /* Individual Fields */
 .gp-hero-form-field {
-    padding: 5px 30px;
+    padding: 5px 10px;
     position: relative;
 }
 
@@ -876,7 +728,7 @@ input[type="submit"] {
 .gp-hero-title span {
     display: block;
     color: var(--gp-text-light);
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     margin-top: 10px;
     /* color: rgba(255, 255, 255, 0.85); */
@@ -988,9 +840,9 @@ p.gp-card-subtitle {
 /* Meta Rows */
 .gp-card-meta {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 12px 18px;
+    padding: 10px;
     font-size: 0.85rem;
 }
 
@@ -1004,6 +856,7 @@ p.gp-card-subtitle {
 .gp-card-meta-top,
 .gp-card-meta-bottom {
     border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
     height: 45px;
     overflow: hidden;
 }
@@ -1275,9 +1128,11 @@ Blog
 .gp-side-content .page-title,
 .gp-side-content .job_listing-title {
     font-family: 'Merriweather', serif;
-    color: var(--tr-dark);
+    /* color: var(--gp-wine-dark); */
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.02em;
+    text-shadow: rgba(0, 0, 0, .8) 0 2px 4px;
 }
 
 .gp-post-container,
@@ -1462,10 +1317,11 @@ Blog
 }
 
 .gp-hero-title {
-    margin-top: 200px;
-    color: var(--gp-wine-dark);
+    margin-top: 60px;
+    color: #ffffff;
     z-index: 2;
     position: relative;
+    text-shadow: 1px 1px 4px #050505;
 }
 
 .gp-hero-subtitle {
@@ -1571,7 +1427,7 @@ Blog
 
 .gp-calltoaction-section {
     background: var(--gp-green-light);
-    padding: 30px 0;
+    padding: 0;
     margin-top: 60px;
 }
 
@@ -1671,6 +1527,7 @@ Blog
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    z-index: 99;
 }
 
 .gp-badge i {
@@ -1733,8 +1590,22 @@ Blog
 
 .gp-sidebar-card h4 {
     font-family: 'Merriweather', serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: 700;
     margin-bottom: 15px;
+}
+
+.gp-sidebar-card h4.widget-title .bi {
+    font-size: 1rem;
+    margin-right: 6px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.gp-sidebar-card .gp-venue-videos {}
+
+.gp-sidebar-card .gp-sidebar-youtube-videos .gp-video-item {
+    margin-bottom: 10px;
 }
 
 .gp-btn {
@@ -1747,6 +1618,7 @@ Blog
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
+    margin-top: 20px;
 }
 
 .gp-btn-primary {
@@ -1902,14 +1774,11 @@ Blog
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-
-    min-height: 160px;
+    min-height: 100px;
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     padding: 20px;
 }
@@ -1918,6 +1787,8 @@ Blog
     font-weight: 600;
     color: #222;
     line-height: 1.3;
+    padding: 0;
+    margin: 0;
 }
 
 .gp-cta-offer-text del {
@@ -1930,15 +1801,630 @@ Blog
     font-weight: 700;
 }
 
+.gp-nav-icons {
+    gap: 8px;
+}
 
+.gp-nav-icon {
+    font-size: 20px;
+    color: var(--gp-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.gp-nav-icons .bi {
+    font-size: 20px;
+}
+
+.gp-nav-icon:hover {
+    color: var(--gp-wine-color);
+    transform: translateY(-1px);
+}
+
+
+.gp-nav-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.gp-nav-icon:hover {
+    background: var(--gp-wine-color);
+    color: #fff;
+    border-color: var(--gp-wine-color);
+}
+
+.primary-header .nav-menu.primary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-left: 0;
+}
+
+.nav-menu-container {
+    flex: 1 1 auto;
+}
+
+.gp-nav-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+    color: var(--gp-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.25s ease;
+}
+
+.gp-nav-icon:hover {
+    background: var(--gp-wine-color);
+    color: #fff;
+    border-color: var(--gp-wine-color);
+    transform: translateY(-1px);
+}
+
+.primary-header .container {
+    padding: 0;
+}
+
+.archive-post-page {
+    padding-top: 60px;
+}
+
+
+/** 
+Archive Post Page 
+*/
+
+.archive-post-page h2.entry-title,
+.archive-post-page h2.entry-title a {
+    font-family: 'Merriweather', serif;
+    /* color: var(--gp-wine-dark); */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-shadow: rgba(0, 0, 0, .8) 0 2px 4px;
+}
+
+.archive-post-page aside a {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+}
+
+.archive-post-page aside .wp-block-heading {
+    font-family: 'Merriweather', serif;
+    color: var(--gp-wine-dark);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+}
+
+
+.gp-footer-secondary-links li {
+    margin-right: 10px;
+    list-style: none;
+}
+
+.gp-footer-secondary-links a {
+    color: var(--gp-text-primary);
+    text-decoration: none;
+}
+
+.gp-footer-secondary-links a:hover {
+    text-decoration: underline;
+}
+
+.has-image.entry-cover:after {
+    background: transparent;
+}
+
+/**
+Hide filters - but leave the functionality
+*/
+
+.job_filters.child-theme .search_jobs div.search_keywords,
+.job_filters.child-theme .search_jobs div.filter_by_tag {
+    display: none !important;
+}
+
+
+.ido-verification-page-content .page-title,
+.woocommerce-shop .page-title {
+    color: var(--gp-wine-dark);
+    text-shadow: none;
+}
+
+
+
+.cover-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    /* base height */
+    padding: 3rem 2.5rem;
+    /* space between frame and content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .cover-frame {
+    position: absolute;
+    inset: 0;
+    padding: 24px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    text-align: center;
+} */
+
+.category-intelligent-planning .entry-content h2.wp-block-heading:first-child {
+    font-family: "Dancing Script", cursive;
+    color: var(--gp-wine-dark);
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.category-intelligent-planning #secondary aside li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.category-intelligent-planning #secondary aside li::before {
+    content: "❧";
+    /* change to ★, ✦, ❥, ❧, →, etc. */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--gp-wine-dark);
+    font-size: 16px
+}
+
+.category-intelligent-planning #secondary aside li a {
+    font-size: 16px;
+    color: var(--gp-text-primary);
+    text-decoration: none;
+}
+
+.category-intelligent-planning #secondary aside li a:hover {
+    text-decoration: underline;
+}
+
+.gp-calltoaction-section .gp-cta-title {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+
+/* Ensure image wrapper is positioning context */
+.gp-card-image {
+    position: relative;
+}
+
+/* IDO Verified Badge */
+.gp-ido-verified-badge {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    z-index: 3;
+    width: 70px;
+    z-index: 99;
+
+}
+
+.gp-ido-verified-badge img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+section.gp-wedding-calender-section {
+    padding-top: 60px;
+}
+
+section.gp-wedding-calender-section h1,
+h2 {
+    color: var(--gp-wine-dark);
+    margin-bottom: 20px;
+}
+
+.content-single-job_listing-hero-wrapper.cover-wrapper {
+    justify-content: flex-start;
+}
+
+.content-single-job_listing-hero-wrapper.cover-wrapper .content-single-job_listing-hero-inner {
+    width: 100%;
+}
+
+
+.filtered-venue-single .gp-card-image {
+    /* position: relative; */
+    height: 200px;
+}
+
+
+.nav-menu li:hover>ul.sub-menu>li {
+    height: 28px;
+}
+
+/* Target Nav menu */
+
+.site-header .menu>li>a::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 34%;
+    width: 1px;
+    height: 20px;
+    background-color: rgba(24, 21, 21, 0.24);
+}
+
+.site-header .menu>li:last-child>a::after {
+    background-color: transparent;
+}
+
+.site-header .menu>li.menu-item a:hover {
+    color: #ffffff;
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item a:hover {
+    color: #140c0c;
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item>ul.sub-menu {
+    padding-top: 0;
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item>ul.sub-menu>li.menu-item {
+    height: 22px;
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item>ul.sub-menu>li.menu-item a {
+    font-size: 0.85rem;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+
+
+.gp-custom-header .primary-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3px;
+    height: 1px;
+    background: var(--gp-green-primary);
+}
+
+.site-header .menu>li.menu-item:nth-child(7)>a {
+    color: #ffffff;
+    /* background-color: #16a34a;
+  padding: 8px 16px;
+  border-radius: 6px; */
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item:nth-child(6)>ul.sub-menu {
+    padding-top: 0;
+    top: -100px
+}
+
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item:nth-child(6)>ul.sub-menu::before,
+.site-header .menu>li.menu-item>ul.sub-menu>li.menu-item:nth-child(6)>ul.sub-menu::after {
+    visibility: hidden;
+}
+
+.container.gp-single-job-listing-container .gp-venue-main h1,
+.container.gp-single-job-listing-container .gp-venue-main h2,
+.container.gp-single-job-listing-container .gp-venue-main h3,
+.container.gp-single-job-listing-container .gp-venue-main h4,
+.container.gp-single-job-listing-container .gp-venue-main h5,
+.container.gp-single-job-listing-container .gp-venue-main h6 {
+    padding-top: 30px;
+}
+
+
+.container.gp-single-job-listing-container .gp-venue-main h1 {}
+
+.container.gp-single-job-listing-container .gp-venue-main h2 {}
+
+.container.gp-single-job-listing-container .gp-venue-main h3 {
+    font-size: 22px;
+    ;
+}
+
+.container.gp-single-job-listing-container .gp-venue-main h4 {
+    font-size: 19px;
+}
+
+.container.gp-single-job-listing-container .gp-venue-main h5 {
+    font-size: 16px
+}
+
+.container.gp-single-job-listing-container .gp-venue-main h6 {
+    font-size: 14px;
+}
+
+
+
+.container.gp-single-job-listing-container .gp-venue-main h1:first-child,
+.container.gp-single-job-listing-container .gp-venue-main h2:first-child,
+.container.gp-single-job-listing-container .gp-venue-main h3:first-child,
+.container.gp-single-job-listing-container .gp-venue-main h4:first-child,
+.container.gp-single-job-listing-container .gp-venue-main h5:first-child,
+.container.gp-single-job-listing-container .gp-venue-main h6:first-child {
+    padding-top: 0;
+}
+
+
+.listing-rating.listing-rating--single,
+.content-single-job_listing-hero-actions {
+    display: none;
+}
+
+
+.gp-venue-main .gp-sidebar-card h3 {}
+
+.nav-menu li:hover {
+    color: #ffffff;
+}
+
+
+.gp-sidebar-reviews .gp-review-item {
+    border-bottom: 2px solid #efefef;
+    margin-bottom: 8px;
+}
+
+.gp-sidebar-reviews .gp-review-item:last-child {
+    border-bottom: none;
+}
+
+
+.gp-sidebar-reviews .gp-review-stars .bi {
+    font-size: 0.8rem;
+    color: var(--gp-wine-dark);
+}
+
+.gp-sidebar-reviews .gp-review-text {
+    font-size: 0.8rem;
+    color: #554f52;
+}
+
+
+/* Custom Filters CSS Starts */
+
+.venue-archive-page.country-description-venue-archive-page {}
+
+.venue-archive-page.country-description-venue-archive-page h3 {}
+
+.venue-archive-page.country-description-venue-archive-page p {}
+
+
+/* 
+
+#jobFiltersResult .search_jobs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+#jobFiltersResult .search_region,
+#jobFiltersResult .search_categories {
+    flex: 1;
+    min-width: 220px;
+}
+
+#jobFiltersResult .update_results_override {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#jobFiltersResult .update_results_override input[type="submit"] {
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.showing_jobs .reset {
+    margin-left: auto;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.showing_jobs .showing_jobs_count {
+    flex: 1;
+}
+
+.showing_jobs .job_sort {
+    margin-left: auto;
+} */
+
+
+
+
+/* 
+#jobFiltersResult{
+  display: block;
+}
+
+#jobFiltersResult::before, #jobFiltersResult::after{
+  display: none;
+}
+
+#jobFiltersResult .search_jobs::before{
+  display: none;
+}
+
+#jobFiltersResult {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+#jobFiltersResult .search_jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+
+#jobFiltersResult .update_results_override {
+    grid-column: 3;
+    margin-top: 0;
+}
+
+#jobFiltersResult .search_region,
+#jobFiltersResult .search_categories {
+    width: 100%;
+}
+#jobFiltersResult .showing_jobs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.showing_jobs .showing_jobs_count {
+    flex: 1;
+}
+
+.showing_jobs .job_sort {
+    margin-left: auto;
+} */
+
+
+
+/* Custom Filters CSS Ends */
+
+
+
+#jobFiltersResult::before,
+#jobFiltersResult::after {
+    display: none;
+}
+
+#jobFiltersResult .search_jobs::before {
+    display: none;
+}
+
+.gp-job-filters-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.gp-job-filters-wrapper .search_jobs {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.gp-job-filters-wrapper .search_region,
+.gp-job-filters-wrapper .search_categories {
+    flex: 1;
+    min-width: 220px;
+}
+
+.gp-job-filters-wrapper .chosen-container {
+    width: 100% !important;
+}
+
+.gp-job-filters-wrapper .update_results_override {
+    /* flex: 0 0 auto;
+     */
+    margin-top: 0;
+    width: 25%;
+    padding: 12px 22px;
+    white-space: nowrap;
+}
+
+.showing_jobs.showing_jobs--has-rss.showing_jobs--has-reset {
+    display: none !important;
+}
+
+
+.venue-archive-page ul.job_listings{
+    margin: 0;
+    padding: 0;
+}
+
+.venue-archive-page .job_listings .job-listing-description {
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+}
+
+.venue-archive-page .job_listings .job-listing-description h1,
+.venue-archive-page .job_listings .job-listing-description h2,
+.venue-archive-page .job_listings .job-listing-description h3,
+.venue-archive-page .job_listings .job-listing-description h4,
+.venue-archive-page .job_listings .job-listing-description h5,
+.venue-archive-page .job_listings .job-listing-description h6,
+.venue-archive-page .job_listings .job-listing-description p{
+    padding-bottom: 10px;
+}
+
+.venue-archive-page .job_listings .job-listing-description h1,
+.venue-archive-page .job_listings .job-listing-description h2,
+.venue-archive-page .job_listings .job-listing-description h3,
+.venue-archive-page .job_listings .job-listing-description h4,
+.venue-archive-page .job_listings .job-listing-description h5,
+.venue-archive-page .job_listings .job-listing-description h6{
+    color: var(--gp-wine-dark)
+}
 /* =========================
    GP RESPONSIVE
 ========================= */
 
+@media (max-width: 768px) {
+    .gp-job-filters-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .gp-job-filters-wrapper .search_jobs {
+        flex-direction: column;
+    }
+
+    .gp-job-filters-wrapper .update_results_override {
+        width: 100%;
+    }
+}
+
+
 @media (min-width: 992px) {
     .nav-menu.primary {
         text-align: right;
-        padding-left: 3em;
+        padding-left: 2em;
     }
 }
 
