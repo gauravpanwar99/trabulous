@@ -25,6 +25,8 @@ wp-config.php
 /wp-content/themes/listify/
 
 # Example plugin
+/wp-content/plugins/revslider
+/wp-content/plugins/LayerSlider
 /wp-content/plugins/hello.php
 /wp-content/plugins/akismet/
 /wp-content/plugins/woocommerce
