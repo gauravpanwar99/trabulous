@@ -617,13 +617,17 @@ get_header();
             <div class="row justify-content-center g-3">
                 <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
-                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Couple Holiday: 4 Nights In Bangkok And Phuket" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="/island.webp"></div>
+                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Couple Holiday: 4 Nights In Bangkok And Phuket" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/island.webp"></div>
                         <div class="card-body p-3 bg-white">
                             <h6 class="fw-bold mb-2">Couple Holiday: 4 Nights In Bangkok And Phuket</h6>
-                            <div class="card-meta small mb-3 d-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
+                            <div class="card-meta small mb-3 d-flex align-items-center gap-1">
+                                <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path>
                                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
-                                </svg>Bangkok (2 Nights, 3 Days) +1 more</div>
+                                </svg> -->
+                                Bangkok (2 Nights, 3 Days) +1 more
+                            </div>
                             <div class="card-meta-badges"><span class="card-meta-badge">COUPLE FRIENDLY</span></div>
                         </div>
                         <hr class="m-0">
@@ -632,21 +636,33 @@ get_header();
                                 <div class="fw-bold" style="font-size:22px">₹43,051</div>
                                 <div class="small">2 Nights/Person</div>
                             </div>
-                            <div class="user-actions"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
+                            <div class="user-actions">
+                                <i class="bi bi-telephone phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
                                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
-                                </svg><button class="btn btn-coral">Book Now</button></div>
+                                </svg> -->
+                                <?php
+                                $contactPage = get_page_by_path('contact-us');
+                                ?>
+                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
-                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Friends Retreat: 4 Nights In Bangkok And Pattaya" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="/party.jpg"></div>
+                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Friends Retreat: 4 Nights In Bangkok And Pattaya" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/party.jpg"></div>
                         <div class="card-body p-3 bg-white">
                             <h6 class="fw-bold mb-2">Friends Retreat: 4 Nights In Bangkok And Pattaya</h6>
-                            <div class="card-meta small mb-3 d-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
+                            <div class="card-meta small mb-3 d-flex align-items-center gap-1">
+                                <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path>
                                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
-                                </svg>Pattaya (3 Nights,4 Days) +1 more</div>
+                                </svg> -->
+
+                                Pattaya (3 Nights,4 Days) +1 more
+                            </div>
                             <div class="card-meta-badges"><span class="card-meta-badge">FRIENDS</span><span class="card-meta-badge">FAMILY</span></div>
                         </div>
                         <hr class="m-0">
@@ -655,21 +671,30 @@ get_header();
                                 <div class="fw-bold" style="font-size:22px">₹42,000</div>
                                 <div class="small">3 Nights/Person</div>
                             </div>
-                            <div class="user-actions"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
+                            <div class="user-actions">
+                                <i class="bi bi-telephone phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
                                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
-                                </svg><button class="btn btn-coral">Book Now</button></div>
+                                </svg> -->
+                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
-                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Family Getaway: 11 Nights In Vietnam" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="/thai.webp"></div>
+                        <div style="position:relative;height:200px;overflow:hidden"><img alt="Family Getaway: 11 Nights In Vietnam" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/thai.webp"></div>
                         <div class="card-body p-3 bg-white">
                             <h6 class="fw-bold mb-2">Family Getaway: 11 Nights In Vietnam</h6>
-                            <div class="card-meta small mb-3 d-flex align-items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
+                            <div class="card-meta small mb-3 d-flex align-items-center gap-1">
+                                <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-geo-alt me-1 geo-icon">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path>
                                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
-                                </svg>Hanoi (5 Nights, 6 Days) +3 more</div>
+                                </svg> -->
+
+                                Hanoi (5 Nights, 6 Days) +3 more
+                            </div>
                             <div class="card-meta-badges"><span class="card-meta-badge">FAMILY</span></div>
                         </div>
                         <hr class="m-0">
@@ -678,9 +703,13 @@ get_header();
                                 <div class="fw-bold" style="font-size:22px">₹67,800</div>
                                 <div class="small">5 Nights/Person</div>
                             </div>
-                            <div class="user-actions"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
+                            <div class="user-actions">
+                                <i class="bi bi-telephone phone-icon"></i>
+                                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-telephone phone-icon">
                                     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
-                                </svg><button class="btn btn-coral">Book Now</button></div>
+                                </svg> -->
+                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -697,15 +726,19 @@ get_header();
                         <h2>Bigger Group? Get Special Offers up to 50% Off</h2>
                         <p>
                             We create unforgettable travel experiences, customised specially
-                            for your group trips and corporate journeys.
+                            for your group trips.
                         </p>
                         <div class="cta-actions">
                             <button type="button" class="cta-button">Get a Callback</button>
                             <button type="button" class="cta-button cta-button-secondary">See Upcoming Itineraries</button>
+                            <a href="https://wa.me" target="_blank">
+                                <i class="bi bi-whatsapp cta-button"></i>
+                            </a>
+
                         </div>
                     </div>
                     <div class="cta-decor">
-                        <img src="/group.png" alt="Group of travelers" class="cta-decor-image" />
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/group.png" alt="Group of travelers" class="cta-decor-image" />
 
                     </div>
                 </div>
@@ -714,7 +747,7 @@ get_header();
     </section>
 
 
-    <section class="testimonials py-5" style="background-color:#E0FFFF">
+    <section class="testimonials py-5">
         <div class="testimonials-decor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-chat-quote-fill chat-quote-decor">
                 <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M7.194 6.766a1.7 1.7 0 0 0-.227-.272 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.5 2.5 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.5 2.5 0 0 0-.228-.4 1.7 1.7 0 0 0-.227-.273 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"></path>
             </svg></div>
@@ -745,7 +778,7 @@ get_header();
                                 <div class="testimonial-name">- <!-- -->Alice W.</div>
                                 <div class="testimonial-role">Travel Enthusiasts</div>
                             </div>
-                            <div class="testimonial-user"><img alt="Alice W." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="/testimonials/alice.png"></div>
+                            <div class="testimonial-user"><img alt="Alice W." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/alice.png"></div>
                         </div>
                     </div>
                 </div>
@@ -768,7 +801,7 @@ get_header();
                                 <div class="testimonial-name">- <!-- -->Mark T.</div>
                                 <div class="testimonial-role">Adventure Seeker</div>
                             </div>
-                            <div class="testimonial-user"><img alt="Mark T." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="/testimonials/mark.png"></div>
+                            <div class="testimonial-user"><img alt="Mark T." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/mark.png"></div>
                         </div>
                     </div>
                 </div>
@@ -791,7 +824,7 @@ get_header();
                                 <div class="testimonial-name">- <!-- -->Sophie L.</div>
                                 <div class="testimonial-role">Solo Traveler</div>
                             </div>
-                            <div class="testimonial-user"><img alt="Sophie L." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="/testimonials/sophie.png"></div>
+                            <div class="testimonial-user"><img alt="Sophie L." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/sophie.png"></div>
                         </div>
                     </div>
                 </div>
@@ -814,7 +847,7 @@ get_header();
                                 <div class="testimonial-name">- <!-- -->James K.</div>
                                 <div class="testimonial-role">Business Traveler</div>
                             </div>
-                            <div class="testimonial-user"><img alt="James K." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="/testimonials/james.png"></div>
+                            <div class="testimonial-user"><img alt="James K." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/james.png"></div>
                         </div>
                     </div>
                 </div>

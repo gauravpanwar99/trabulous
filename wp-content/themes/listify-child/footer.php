@@ -81,7 +81,7 @@
 						hello@trabulous.com
 					</a>
 					<a href="tel:+1234567890" class="gp-btn-wine">
-						+1 234 567 890
+						+91 7557207786
 					</a>
 				</div>
 				<div class="gp-footer-secondary-links">
@@ -113,7 +113,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row gp-footer-copyright-row">
 			<div class="col-12 text-center gp-footer-copyright">
 				© 2025 Trabulous. All rights reserved.
 			</div>
