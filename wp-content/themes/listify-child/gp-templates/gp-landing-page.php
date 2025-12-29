@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: GP – Landing Page
+ * Template Name: Trabulous – Landing Page
  */
 
 if (!defined('ABSPATH')) exit;
@@ -11,33 +11,21 @@ get_header();
 
 <main class="gp-landing-page">
 
-    <section class="gp-hero-banner"
-        style="background-image: url('<?php echo esc_url(get_stylesheet_directory_uri() . '/assets/images/2.jpeg'); ?>');">
-
+    <!-- <section class="gp-hero-banner"
+        style="background-image: url('<?php //echo esc_url(get_stylesheet_directory_uri() . '/assets/images/2.jpeg'); ?>');">
         <div class="gp-hero-overlay"></div>
-
         <div class="container">
             <div class="row">
                 <div class="col-12 gp-hero-content text-center">
-
-                    <!-- Big Heading -->
                     <h1 class="gp-hero-title">
                         The World’s Most Beautiful Places to Say “I Do” <br>
                         <span>— Curated for You</span>
                     </h1>
-
-
-                    <!-- Small Heading -->
                     <p class="gp-hero-subtitle">
                         Curated destinations for unforgettable experiences
                     </p>
-
-                    <!-- HERO FORM -->
                     <div class="gp-hero-banner-form">
-
                         <form class="gp-hero-search-form">
-
-                            <!-- Category -->
                             <div class="gp-hero-form-field">
                                 <select>
                                     <option value="">Search Country</option>
@@ -45,10 +33,7 @@ get_header();
                                     <option>Dubai (8)</option>
                                     <option>Kenya (5)</option>
                                 </select>
-
                             </div>
-
-                            <!-- Destination -->
                             <div class="gp-hero-form-field">
                                 <select>
                                     <option value="">Theme</option>
@@ -58,52 +43,37 @@ get_header();
                                     <option>Fairytale (12)</option>
                                 </select>
                             </div>
-
-                            <!-- Date -->
-                            <!-- <div class="gp-hero-form-field">
+                            <div class="gp-hero-form-field">
                                 <input type="date" placeholder="Select Date" />
-                            </div> -->
-
-                            <!-- Submit -->
+                            </div>
                             <div class="gp-hero-form-submit">
                                 <button type="submit">
                                     <i class="bi bi-search"></i>
                                     Search Now
                                 </button>
                             </div>
-
                         </form>
-
                     </div>
-
                 </div>
             </div>
         </div>
-
-    </section>
+    </section> -->
 
 
     <section class="gp-calltoaction-section">
         <div class="container">
             <div class="row align-items-center">
-
-                <!-- Left: Offer / Price Badge -->
                 <div class="col-md-3 text-center text-md-start">
                     <div class="gp-cta-offer-badge">
                         <p class="gp-cta-offer-text">
-                            <!-- Buy The Pro Toolkit Now<br> -->
                             <strong>
                                 <del>£199</del> <span class="gp-cta-price">£99</span>
                             </strong>
                         </p>
                     </div>
-
                 </div>
-
-                <!-- Right: Content + Button -->
                 <div class="col-md-9">
                     <div class="row align-items-center">
-
                         <div class="col-md-8">
                             <h4 class="gp-cta-title">
                                 The Absolutely Essential Guide to Help You Save (££)
@@ -114,7 +84,6 @@ get_header();
                                 with guides, tools, and budgets.
                             </p>
                         </div>
-
                         <div class="col-md-4 text-md-end text-center">
                             <h6>Buy The Pro Toolkit Now</h6>
                             <a href="<?php echo esc_url(wc_get_page_permalink('shop')); ?>"
@@ -122,17 +91,14 @@ get_header();
                                 Online Purchases
                             </a>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
     <section class="gp-featured-venues-section gp-section">
-
         <div class="container">
             <div class="row align-items-center gp-featured-header-row">
                 <div class="col-md-8">
@@ -143,11 +109,9 @@ get_header();
                         Our hand-picked selection of elite wedding
                     </h3>
                 </div>
-
                 <div class="col-md-4 text-end">
                     <div class="gp-featured-toggle-buttons">
                         <button class="gp-toggle-btn gp-toggle-active">Weekly</button>
-                        <!-- <button class="gp-toggle-btn">Monthly</button> -->
                     </div>
                 </div>
             </div>
@@ -155,7 +119,6 @@ get_header();
 
             <!-- Cards Row -->
             <div class="row gp-featured-cards-row">
-
                 <?php
                 $args = [
                     'post_type'      => 'job_listing',
@@ -178,8 +141,6 @@ get_header();
 
                         <div class="col-md-4">
                             <div class="gp-card-container-homepage">
-
-                                <!-- Card Image -->
                                 <div class="gp-card-image">
                                     <a href="<?php the_permalink(); ?>" class="gp-card-image-link">
                                         <?php if (has_post_thumbnail()) : ?>
@@ -190,12 +151,11 @@ get_header();
                                                 alt="<?php the_title_attribute(); ?>">
                                         <?php endif; ?>
                                     </a>
-
-                                    <!-- <div class="gp-card-badges">
+                                    <div class="gp-card-badges">
                                         <span class="gp-badge">
                                             <i class="bi bi-lightning-charge"></i> Featured
                                         </span>
-                                    </div> -->
+                                    </div>
                                     <div class="gp-card-badges">
 
                                         <?php if (get_field('is_featured') == 'yes') : ?>

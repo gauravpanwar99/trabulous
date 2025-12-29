@@ -1,13 +1,3 @@
-<?php
-
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package Listify
- */
-?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -30,11 +20,8 @@
 				<div class="container">
 					<div class="primary-header-inner">
 						<div class="site-branding">
-							<?php // echo listify_partial_site_branding(); 
-							?>
 							<a href="<?php echo site_url(); ?>" aria-title="Trabulous" rel="home" class="gp-custom-logo-link custom-header">
-								<img src="<?php echo site_url(); ?>/wp-content/logo-130.png" aria-hidden="true" role="presentation" class="gp-custom-header-image" alt="Trabulous Logo">
-
+								<img src="<?php echo site_url(); ?>/wp-content/logo.png" aria-hidden="true" role="presentation" class="gp-custom-header-image" alt="Trabulous Logo">
 							</a>
 						</div>
 
@@ -122,9 +109,7 @@
 						</div>
 					<?php endif; ?>
 				</div>
-			</nav><!-- #site-navigation -->
-		</header><!-- #masthead -->
-
+			</nav>
+		</header>
 		<?php do_action('listify_content_before'); ?>
-
 		<div id="content" class="site-content gp-side-content">

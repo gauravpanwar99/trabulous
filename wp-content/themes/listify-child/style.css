@@ -2219,11 +2219,11 @@ h2 {
 
 /* Custom Filters CSS Starts */
 
-.venue-archive-page.country-description-venue-archive-page {}
+/* .venue-archive-page.country-description-venue-archive-page {}
 
 .venue-archive-page.country-description-venue-archive-page h3 {}
 
-.venue-archive-page.country-description-venue-archive-page p {}
+.venue-archive-page.country-description-venue-archive-page p {} */
 
 
 /* 
@@ -2323,7 +2323,7 @@ h2 {
 /* Custom Filters CSS Ends */
 
 
-
+/* 
 #jobFiltersResult::before,
 #jobFiltersResult::after {
     display: none;
@@ -2358,8 +2358,7 @@ h2 {
 }
 
 .gp-job-filters-wrapper .update_results_override {
-    /* flex: 0 0 auto;
-     */
+   
     margin-top: 0;
     width: 25%;
     padding: 12px 22px;
@@ -2368,7 +2367,7 @@ h2 {
 
 .showing_jobs.showing_jobs--has-rss.showing_jobs--has-reset {
     display: none !important;
-}
+} */
 
 
 .venue-archive-page ul.job_listings{
@@ -2401,6 +2400,9 @@ h2 {
 .venue-archive-page .job_listings .job-listing-description h6{
     color: var(--gp-wine-dark)
 }
+
+
+
 /* =========================
    GP RESPONSIVE
 ========================= */
