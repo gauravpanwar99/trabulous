@@ -64,7 +64,7 @@ get_header();
                                     false
                                 );
                                 ?>
-                                <a href="#" class="gp-contact-social">
+                                <!-- <a href="#" class="gp-contact-social">
                                     <i class="bi bi-facebook"></i>
                                 </a>
 
@@ -90,7 +90,7 @@ get_header();
 
                                 <a href="#" class="gp-contact-social">
                                     <i class="bi bi-whatsapp"></i>
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>

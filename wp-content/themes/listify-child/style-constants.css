@@ -1,36 +1,30 @@
-:root {
-    /* ===== Brand Greens ===== */
+/* :root {
     --gp-green-primary: #086019;
-    /* Logo / accents */
+   
     --gp-green-heading: #0B6B2B;
-    /* Headings */
+    
     --gp-green-light: #84baa0;
     --gp-green-light-bg-weddify: rgba(185, 210, 176, 1);
-    /* Header / soft bg */
-
-    /* ===== Secondary Wine ===== */
+ 
     --gp-wine-dark: #5C263F;
-    /* CTA / emphasis */
+   
     --gp-wine-light: rgba(247, 191, 180, 0.2);
     --gp-wine-light-bg-weddify: #FCEDF1;
-    /* Soft bg */
 
-    /* ===== Text ===== */
+
     --gp-text-primary: #222222;
     --gp-text-secondary: #555555;
     --gp-text-light: #ffffff;
 
-    /* ===== Backgrounds ===== */
     --gp-bg-light: #ffffff;
     --gp-bg-grey: #f7f7f7;
     --gp-bg-soft-green: rgba(132, 186, 160, 0.15);
     --gp-bg-soft-wine: rgba(247, 191, 180, 0.2);
 
-    /* ===== Borders ===== */
     --gp-border-light: #e5e5e5;
     --gp-border-dark: #cccccc;
 
-    /* Status / Labels */
+   
     --gp-success: #2E7D32;
     --gp-warning: #ED6C02;
     --gp-info: #0288D1;
@@ -71,4 +65,4 @@ h4,
 h5,
 h6 {
     color: var(--gp-green-heading);
-}
+} */

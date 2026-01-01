@@ -178,13 +178,17 @@ Custom GP STYLES Start Here
   /** TRABULOUS GLOBAL COLORS */
 
   --tb-blue-primary: #3498DB;
+  --tb-blue-primary: #32b0ad;
+
   --tb-blue-dark: #234f9c;
+  --tb-blue-dark: #32b0ad;
 
   --tb-white-background: #ffffff;
   --tb-white-text: #ffffff;
 
   --tb-black-text: #222222;
   --tb-blue-background: #2980B9;
+  --tb-blue-background: #32b0ad;
 
   --tb-coral-color: #fe6845;
   --color-coral: #fe6845;
@@ -1236,7 +1240,7 @@ Blog
 
 .gp-footer-social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 20px;
 }
@@ -3467,6 +3471,7 @@ Footer Styles Starts
   left: -30px;
   bottom: -30px;
   z-index: 3;
+  display: none;
 }
 
 .testimonial-user-img {

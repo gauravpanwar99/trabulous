@@ -13,7 +13,7 @@
 					true
 				);
 				?>
-				<a href="#" class="gp-footer-social">
+				<!-- <a href="#" class="gp-footer-social">
 					<i class="bi bi-facebook"></i> Facebook
 				</a>
 
@@ -68,7 +68,7 @@
 				<span class="gp-footer-separator"></span>
 				<a href="#" class="gp-footer-social">
 					<i class="bi bi-whatsapp"></i> WhatsApp
-				</a>
+				</a> -->
 			</div>
 		</div>
 		<div class="row py-5">
