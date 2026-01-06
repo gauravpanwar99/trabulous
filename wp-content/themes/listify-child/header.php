@@ -17,7 +17,7 @@
 
 		<header id="masthead" class="gp-custom-header <?php echo esc_attr(is_front_page() ? 'site-header site-header--' . get_theme_mod('home-header-style', 'default') : 'site-header'); ?>">
 			<div class="primary-header">
-				<div class="container">
+				<div class="container-fluid">
 					<div class="primary-header-inner">
 						<div class="site-branding">
 							<a href="<?php echo site_url(); ?>" aria-title="Trabulous" rel="home" class="gp-custom-logo-link custom-header">
@@ -26,6 +26,25 @@
 						</div>
 
 						<div class="primary nav-menu">
+							<div class="gp-nav-icons d-flex align-items-center">
+
+								<!-- Profile / Login -->
+								<a href="<?php echo esc_url(wp_login_url()); ?>"
+									class="gp-nav-icon"
+									title="My Account">
+									<i class="bi bi-person"></i>
+								</a>
+
+								<!-- Shop -->
+								<!-- <a href="<?php echo esc_url(get_permalink(wc_get_page_id('shop'))); ?>"
+									class="gp-nav-icon"
+									title="Shop">
+									<i class="bi bi-bag"></i>
+								</a> -->
+
+							</div>
+
+
 							<?php
 							$listify_new_skin = get_theme_mod('color-scheme');
 							if (listify_theme_mod('nav-secondary', true) && isset($listify_new_skin) && $listify_new_skin == "listify-new-skin") {
@@ -64,6 +83,7 @@
 							</div>
 						</div>
 					<?php endif; ?>
+
 				</div>
 			</div>
 
