@@ -17,7 +17,7 @@
 
 		<header id="masthead" class="gp-custom-header <?php echo esc_attr(is_front_page() ? 'site-header site-header--' . get_theme_mod('home-header-style', 'default') : 'site-header'); ?>">
 			<div class="primary-header">
-				<div class="container-fluid">
+				<div class="container-fluid" id="primary-header-container">
 					<div class="primary-header-inner">
 						<div class="site-branding">
 							<a href="<?php echo site_url(); ?>" aria-title="Trabulous" rel="home" class="gp-custom-logo-link custom-header">
@@ -26,23 +26,7 @@
 						</div>
 
 						<div class="primary nav-menu">
-							<div class="gp-nav-icons d-flex align-items-center">
-
-								<!-- Profile / Login -->
-								<a href="<?php echo esc_url(wp_login_url()); ?>"
-									class="gp-nav-icon"
-									title="My Account">
-									<i class="bi bi-person"></i>
-								</a>
-
-								<!-- Shop -->
-								<!-- <a href="<?php echo esc_url(get_permalink(wc_get_page_id('shop'))); ?>"
-									class="gp-nav-icon"
-									title="Shop">
-									<i class="bi bi-bag"></i>
-								</a> -->
-
-							</div>
+							
 
 
 							<?php
@@ -72,6 +56,39 @@
 									</a>
 								<?php } ?>
 							<?php } ?>
+
+							<div class="gp-nav-icons d-flex align-items-center">
+
+								<!-- Profile / Login -->
+								<a href="https://wa.me/917557207786"
+									class="gp-nav-icon"
+									title="My Account"
+									target="_blank">
+									<i class="bi bi-whatsapp"></i>
+								</a>
+								<a href="https://youtube.com/@trabulousindia?si=t_E46GBWitVvAtX6"
+									class="gp-nav-icon"
+									title="My Account"
+									target="_blank">
+									<i class="bi bi-youtube"></i>
+								</a>
+								<a href="https://www.instagram.com/trabulous.in?igsh=MTJxcDV6c2F0bXRkYQ=="
+									class="gp-nav-icon"
+									title="My Account"
+									target="_blank">
+									<i class="bi bi-instagram"></i>
+								</a>
+
+								<!-- Shop -->
+								<!-- <a href="<?php echo esc_url(get_permalink(wc_get_page_id('shop'))); ?>"
+									class="gp-nav-icon"
+									title="Shop">
+									<i class="bi bi-bag"></i>
+								</a> -->
+
+							</div>
+
+
 						</div>
 					</div>
 

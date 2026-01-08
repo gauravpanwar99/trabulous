@@ -13,62 +13,7 @@
 					true
 				);
 				?>
-				<!-- <a href="#" class="gp-footer-social">
-					<i class="bi bi-facebook"></i> Facebook
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-instagram"></i> Instagram
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-twitter-x"></i> Twitter
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-linkedin"></i> LinkedIn
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-youtube"></i> YouTube
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-tiktok"></i> TikTok
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-pinterest"></i> Pinterest
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-snapchat"></i> SnapChat
-				</a>
-
-				<span class="gp-footer-separator"></span>
-
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-reddit"></i> Reddit
-				</a>
-
-				<span class="gp-footer-separator"></span>
-				<a href="#" class="gp-footer-social">
-					<i class="bi bi-whatsapp"></i> WhatsApp
-				</a> -->
+				
 			</div>
 		</div>
 		<div class="row py-5">
@@ -119,8 +64,17 @@
 			</div>
 		</div>
 	</div>
+	
 </footer>
 <?php wp_footer(); ?>
+<div class="sticky-whatsapp">
+		<div class="wrapper">
+			<button class="sticky-call-btn" onclick="window.location.href='https://wa.me/917557207786'">
+				<i class="bi bi-whatsapp whatsapp-icon"></i>
+				<!-- <span>Chat with us</span> -->
+			</button>
+		</div>
+	</div>
 </body>
 
 </html>
