@@ -772,7 +772,7 @@ get_header();
                                 <p class="mb-4 testimonial-content">"<!-- -->Vietnam trip exceeded expectations. Hotels and transport were excellent.<!-- -->"</p>
                                 <div class="testimonial-meta">
                                     <div class="testimonial-name">- <!-- -->Rachit T.</div>
-                                    <div class="testimonial-role">Adventure Seeker</div>
+                                    <!-- <div class="testimonial-role">Adventure Seeker</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="Mark T." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/mark.png"></div>
                             </div>
@@ -795,7 +795,7 @@ get_header();
                                 <p class="mb-4 testimonial-content">"<!-- -->Smooth booking process and very responsive support team.<!-- -->"</p>
                                 <div class="testimonial-meta">
                                     <div class="testimonial-name">- <!-- -->Anita L.</div>
-                                    <div class="testimonial-role">Solo Traveler</div>
+                                    <!-- <div class="testimonial-role">Solo Traveler</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="Sophie L." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/sophie.png"></div>
                             </div>
@@ -818,7 +818,7 @@ get_header();
                                 <p class="mb-4 testimonial-content">"<!-- -->Highly professional service. Will book our next trip again!<!-- -->"</p>
                                 <div class="testimonial-meta">
                                     <div class="testimonial-name">- <!-- -->Kumar K.</div>
-                                    <div class="testimonial-role">Business Traveler</div>
+                                    <!-- <div class="testimonial-role">Business Traveler</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="James K." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/james.png"></div>
                             </div>

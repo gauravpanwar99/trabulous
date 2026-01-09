@@ -96,9 +96,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="row gp-footer-copyright-row mets-footer-1">
+		<div class="row gp-footer-copyright-row meta-footer-1">
 			<div class="col-12 text-center gp-footer-copyright">
-				<h1>TRABULOUS PVT LTD</h1>
+				<h3>TRABULOUS PVT LTD</h3>
 				<p>Address: 2nd Floor, F-36, Pocket F, Okhla Phase I, Okhla Industrial Estate, New Delhi, Delhi 110020</p>
 				<ul>
 					<li>contact@trabulous.in</li>
@@ -107,18 +107,19 @@
 				</ul>
 				<div class="social-icons-footer">
 					<a href="#"><i class="bi bi-facebook"></i></a>
-					<a href="#"><i class="bi bi-twitter"></i></a>
+					
 					<a href="#"><i class="bi bi-instagram"></i></a>
 					<a href="#"><i class="bi bi-linkedin"></i></a>
+					<a href="#"><i class="bi bi-youtube"></i></a>
 				</div>
 			</div>
 		</div>
 		<div class="row footer-image">
 			<div class="col-12 text-center gp-footer-copyright">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/footer-image.png" alt="Footer Image" class="img-fluid">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/footer.jpg" alt="Footer Image" class="img-fluid">
 			</div>
 		</div>
-		<div class="row gp-footer-copyright-row">
+		<div class="row">
 			<div class="col-12 text-center gp-footer-copyright">
 				© 2025 Trabulous. All rights reserved.
 			</div>
