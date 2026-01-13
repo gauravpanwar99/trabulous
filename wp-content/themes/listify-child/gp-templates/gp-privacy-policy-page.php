@@ -1,17 +1,17 @@
 <?php
 
 /**
- * Template Name: Trabulous-Careers Page
+ * Template Name: Trabulous-Privacy Policy Page
  */
 get_header();
 ?>
 
-<main class="gp-career-page">
+<main class="gp-privacy-policy-page">
     <section class="gp-contact-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="gp-contact-page-title">Careers</h3>
+                    <h3 class="gp-contact-page-title">Privacy Policy</h3>
                     <div class="payment-details">
                         <?php
                         the_content();

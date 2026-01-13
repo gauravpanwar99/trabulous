@@ -2,7 +2,7 @@
 Theme Name:     Listify Child
 Theme URI:      https://astoundify.com/products/listify/
 Template:       listify
-Version:        1.1.6
+Version:        1.1.7
 */
 
 
@@ -1295,6 +1295,10 @@ Blog
   margin-bottom: 15px;
   font-size: 18px;
 }
+.gp-footer-menu-title:hover {
+  color: var(--tb-blue-dark);
+  cursor: pointer;
+}
 
 .gp-footer-menu {
   list-style: none;
@@ -1310,6 +1314,11 @@ Blog
   color: var(--gp-text-primary);
   text-decoration: none;
 }
+
+.gp-footer-menu a:hover, .social-icons-footer a i:hover{
+  color: var(--tb-blue-dark);
+}
+
 
 .gp-footer-copyright {
   padding: 20px 0;
