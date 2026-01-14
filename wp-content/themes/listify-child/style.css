@@ -2,7 +2,7 @@
 Theme Name:     Listify Child
 Theme URI:      https://astoundify.com/products/listify/
 Template:       listify
-Version:        1.1.7
+Version:        1.1.11
 */
 
 
@@ -1295,6 +1295,7 @@ Blog
   margin-bottom: 15px;
   font-size: 18px;
 }
+
 .gp-footer-menu-title:hover {
   color: var(--tb-blue-dark);
   cursor: pointer;
@@ -1315,7 +1316,8 @@ Blog
   text-decoration: none;
 }
 
-.gp-footer-menu a:hover, .social-icons-footer a i:hover{
+.gp-footer-menu a:hover,
+.social-icons-footer a i:hover {
   color: var(--tb-blue-dark);
 }
 
@@ -1326,8 +1328,7 @@ Blog
   color: var(--gp-text-muted);
 }
 
-.meta-footer-1 ul
-{
+.meta-footer-1 ul {
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -1337,19 +1338,21 @@ Blog
   list-style: none;
 }
 
-.social-icons-footer{
+.social-icons-footer {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
 }
-.social-icons-footer a{
+
+.social-icons-footer a {
   color: var(--gp-text-primary);
   font-size: 18px;
   text-decoration: none;
 }
-.social-icons-footer a i{
+
+.social-icons-footer a i {
   transition: color 0.3s ease;
   font-size: 22px;
 }
@@ -3156,10 +3159,10 @@ CTA Full Width Banner Styles
 
 
 .testimonial-wrapper {
-      border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
 }
 
 .testimonials-decor {
@@ -3464,12 +3467,12 @@ Footer Styles Starts
 
 /* Testimonial card styles moved out of component for clarity */
 .testimonial-card {
-    background-color: var(--color-teal);
-    border-radius: 0;
-    transition: transform 0.3s ease;
-    position: relative;
-    border: 0;
-    border-right: 1px solid #ccc;
+  background-color: var(--color-teal);
+  border-radius: 0;
+  transition: transform 0.3s ease;
+  position: relative;
+  border: 0;
+  border-right: 1px solid #ccc;
 }
 
 .testimonial-card:hover {
@@ -3555,8 +3558,8 @@ Footer Styles Starts
 
 /* Name + role (meta) */
 .testimonial-meta {
-font-size: 12px;
-    color: #333333;
+  font-size: 12px;
+  color: #333333;
 }
 
 .testimonial-name {
@@ -4173,4 +4176,22 @@ font-size: 12px;
     padding: 12px 18px;
     font-size: 14px;
   }
+}
+
+.nf-form-content select.ninja-forms-field {
+  color: #888;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 16px;
+}
+
+.nf-form-content nf-field:last-child {
+  text-align: center;
+}
+
+.nf-form-content nf-field:last-child input[type="submit"] {
+  color: #fff;
+  background-color: var(--tb-blue-dark);
 }

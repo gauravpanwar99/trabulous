@@ -7,11 +7,13 @@
 if (!defined('ABSPATH')) exit;
 
 get_header();
+// 
 ?>
 
 <main class="gp-landing-page">
     <section class="gp-hero-banner">
         <?php echo do_shortcode('[rev_slider alias="slider-1"][/rev_slider]'); ?>
+        <?php //echo do_shortcode('[nf-popup id=83]'); ?>
         <?php //echo do_shortcode('[layerslider id="1"]'); 
         ?>
 
@@ -619,19 +621,20 @@ get_header();
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
                         <div style="position:relative;height:200px;overflow:hidden"><img alt="Couple Holiday: 4 Nights In Bangkok And Phuket" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/itineraries/1couple.jpg"></div>
                         <div class="card-body p-3 bg-white">
-                            <h6 class="fw-bold mb-2">Couple Holiday: 4 Nights In Bangkok And Phuket</h6>
+                            <h6 class="fw-bold mb-2">Couple/Friends Holiday: 4 Nights In Bali</h6>
                             <div class="card-meta small mb-3 d-flex align-items-center gap-1">
                                 <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
-
-                                Bangkok (2 Nights, 3 Days) +1 more
+                                Kuta, Seminyak, Many more
                             </div>
-                            <div class="card-meta-badges"><span class="card-meta-badge">COUPLE FRIENDLY</span></div>
+                            <!-- <div class="card-meta-badges">
+                                <span class="card-meta-badge">COUPLE FRIENDLY</span>
+                        </div> -->
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
                             <div class="pricing-info">
-                                <div class="fw-bold" style="font-size:14px"><s>₹49,000</s></div>
-                                <div class="fw-bold" style="font-size:22px">₹43,051</div>
+                                <div class="fw-bold" style="font-size:14px"><s>₹49,999</s></div>
+                                <div class="fw-bold" style="font-size:22px">₹39,051</div>
                                 <div class="small">2 Nights/Person</div>
                             </div>
                             <div class="user-actions">
@@ -642,7 +645,7 @@ get_header();
                                 <?php
                                 $contactPage = get_page_by_path('contact-us');
                                 ?>
-                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
+                                <a class="btn btn-coral open-pop-up-one" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
                             </div>
                         </div>
                     </div>
@@ -657,7 +660,9 @@ get_header();
 
                                 Pattaya (3 Nights,4 Days) +1 more
                             </div>
-                            <div class="card-meta-badges"><span class="card-meta-badge">FRIENDS</span><span class="card-meta-badge">FAMILY</span></div>
+                            <!-- <div class="card-meta-badges">
+                                <span class="card-meta-badge">FRIENDS</span><span class="card-meta-badge">FAMILY</span>
+                            </div> -->
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
@@ -669,7 +674,7 @@ get_header();
                             <div class="user-actions">
                                 <i class="bi bi-telephone phone-icon"></i>
 
-                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
+                                <a class="btn btn-coral open-pop-up-one" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
                             </div>
                         </div>
                     </div>
@@ -684,7 +689,9 @@ get_header();
 
                                 Hanoi (5 Nights, 6 Days) +3 more
                             </div>
-                            <div class="card-meta-badges"><span class="card-meta-badge">FAMILY</span></div>
+                            <!-- <div class="card-meta-badges">
+                                <span class="card-meta-badge">FAMILY</span>
+                            </div> -->
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
@@ -696,7 +703,7 @@ get_header();
                             <div class="user-actions">
                                 <i class="bi bi-telephone phone-icon"></i>
 
-                                <a class="btn btn-coral" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
+                                <a class="btn btn-coral open-pop-up-one" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
                             </div>
                         </div>
                     </div>
@@ -771,7 +778,7 @@ get_header();
                                     </svg></div>
                                 <p class="mb-4 testimonial-content">"<!-- -->Vietnam trip exceeded expectations. Hotels and transport were excellent.<!-- -->"</p>
                                 <div class="testimonial-meta">
-                                    <div class="testimonial-name">- <!-- -->Rachit T.</div>
+                                    <div class="testimonial-name">- <!-- -->Rachit</div>
                                     <!-- <div class="testimonial-role">Adventure Seeker</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="Mark T." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/mark.png"></div>
@@ -794,7 +801,7 @@ get_header();
                                     </svg></div>
                                 <p class="mb-4 testimonial-content">"<!-- -->Smooth booking process and very responsive support team.<!-- -->"</p>
                                 <div class="testimonial-meta">
-                                    <div class="testimonial-name">- <!-- -->Anita L.</div>
+                                    <div class="testimonial-name">- <!-- -->Anita</div>
                                     <!-- <div class="testimonial-role">Solo Traveler</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="Sophie L." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/sophie.png"></div>
@@ -817,7 +824,7 @@ get_header();
                                     </svg></div>
                                 <p class="mb-4 testimonial-content">"<!-- -->Highly professional service. Will book our next trip again!<!-- -->"</p>
                                 <div class="testimonial-meta">
-                                    <div class="testimonial-name">- <!-- -->Kumar K.</div>
+                                    <div class="testimonial-name">- <!-- -->Kumar</div>
                                     <!-- <div class="testimonial-role">Business Traveler</div> -->
                                 </div>
                                 <div class="testimonial-user"><img alt="James K." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/james.png"></div>
@@ -829,11 +836,11 @@ get_header();
         </div>
     </section>
 
-    <section class="cta-wrapper">
+    <!-- <section class="cta-wrapper">
         <?php
-        echo do_shortcode('[rev_slider alias="slider-2"][/rev_slider]');
+       // echo do_shortcode('[rev_slider alias="slider-2"][/rev_slider]');
         ?>
-    </section>
+    </section> -->
     <section class="cta-wrapper">
         <?php
         echo do_shortcode('[rev_slider alias="slider-2-1"][/rev_slider]');

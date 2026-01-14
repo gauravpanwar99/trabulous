@@ -71,7 +71,7 @@
 							<li><a href="https://trabulous.in/new/terms-conditions/">Terms & Conditions</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Customer Success</a></li>
 							<!-- <li><a href="https://trabulous.in/new/contact-us/">Disclaimer</a></li> -->
-							<li><a href="https://trabulous.in/new/contact-us/">Careers</a></li>
+							<li><a href="https://trabulous.in/new/careers/">Careers</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Blogs</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Payments</a></li>
 						</ul>

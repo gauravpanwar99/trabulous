@@ -37,6 +37,9 @@ wp-config.php
 /wp-content/plugins/updraftplus/
 /wp-content/plugins/wp-file-manager/
 /wp-content/plugins/wp-job-manager/
+/wp-content/plugins/popup-maker/
+/wp-content/plugins/popup-addon-for-ninja-forms/
+
 
 
 # Uploads

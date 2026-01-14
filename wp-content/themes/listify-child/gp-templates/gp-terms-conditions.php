@@ -10,7 +10,7 @@ get_header();
     <section class="gp-contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-center">
                     <h3 class="gp-contact-page-title">Terms & Conditions</h3>
                     <div class="payment-details">
                         <?php
