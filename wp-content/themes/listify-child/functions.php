@@ -88,299 +88,6 @@ function listify_child_styles()
 /** Place any new code below this line */
 
 
-// function listify_child_add_custom_listing_data($data, $listing)
-// {
-
-//     // Get listing post safely
-//     $post = get_post($listing->get_id());
-
-//     // Use post_content
-//     $content = apply_filters('the_content', $post->post_content);
-
-//     // Extract first <p> tag
-//     if (preg_match('/<p[^>]*>(.*?)<\/p>/is', $content, $match)) {
-//         $content = $match[1];
-//     }
-
-//     // Remove strong tags WITH their content
-//     $content = preg_replace('/<strong[^>]*>.*?<\/strong>/is', '', $content);
-
-//     // Remove any heading h1-h6 WITH their content
-//     $content = preg_replace('/<h[1-6][^>]*>.*?<\/h[1-6]>/is', '', $content);
-
-//     // Remove any remaining unwanted HTML
-//     $content = wp_strip_all_tags($content);
-
-//     // Final trim
-//     $content = trim($content);
-
-//     // Add to data
-//     $data['listingcontent'] = $content;
-//     $data['cardDisplay']['listingcontent'] = true;
-
-
-//     /**
-//      * ADD BY GAURAV
-//      */
-
-//     // Post basics
-//     $data['post_id']   = $post->ID;
-//     $data['post_content']   = gp_trim_by_characters(strip_tags($post->post_content), 100, '...');
-
-//     // Featured image
-//     $featured = get_the_post_thumbnail_url($post->ID, 'large');
-
-//     if (! $featured) {
-//         $featured = get_stylesheet_directory_uri() . '/assets/images/venue-placeholder.jpg';
-//     }
-
-//     $data['featured_image'] = $featured;
-//     $data['i_do_verified_image_url'] = get_stylesheet_directory_uri() . '/assets/images/ido-verified-badge.png';
-
-//     $data['locationModified'] = gp_trim_by_characters(get_post_meta($post->ID, '_job_location', true), 22, '..');
-
-//     // ACF fields
-//     if (function_exists('get_field')) {
-//         $data['acf'] = [
-//             'ido_verified' => get_field('ido_verified', $post->ID),
-//             'is_featured'  => get_field('is_featured', $post->ID),
-//             'is_curated'   => get_field('is_curated', $post->ID),
-//             'guest_size'   => get_field('guest_size', $post->ID),
-//         ];
-//     }
-
-
-
-
-//     return $data;
-// }
-
-// add_filter('listify_get_listing_to_array', 'listify_child_add_custom_listing_data', 10, 2);
-
-
-/**
- * Add Featured Upload Image field under Featured Listing checkbox
- */
-/*
-function listify_child_featured_image_field( $fields ) {
- 
-    $fields['featured_icon'] = array(
-        'label'       => __( 'Featured Listing icon', 'listify-child' ),
-        'type'        => 'file',
-        'description' => __( 'Upload image icon to show on featured listings', 'listify-child' ),
-        'priority'    => 15, // Featured Listing ke bilkul niche aayega
-        'sanitize_callback' => 'esc_url_raw',
-    );
- 
-    return $fields;
-}
-add_filter( 'job_manager_job_listing_data_fields', 'listify_child_featured_image_field' );*/
-
-
-// function listify_child_claimed_ribbon_script()
-// {
-
-//     wp_enqueue_script('jquery');
-
-//     $custom_js = "
-//         jQuery(function($){
-
-//             function applyClaimedClass() {
-//                 if ( $('.listing-entry-company-image').length > 0 && $('.claimed-ribbon').length > 0 ) {
-//                     $('.claimed-ribbon').addClass('company-image-claimed-ribbon');
-//                 }
-//             }
-
-//             // Run once on load
-//             applyClaimedClass();
-
-//             // Observe dynamic DOM changes (important for underscore.js templates)
-//             const observer = new MutationObserver(function(mutations){
-//                 applyClaimedClass();
-//             });
-
-//             observer.observe(document.body, {
-//                 childList: true,
-//                 subtree: true
-//             });
-
-//         });
-//     ";
-
-//     wp_add_inline_script('jquery', $custom_js);
-
-
-//     wp_enqueue_script(
-//         'idoabroad_script',
-//         get_stylesheet_directory_uri() . '/assets/js/idoabroad.js',
-//         ['jquery'],
-//         '1.0',
-//         true
-//     );
-
-//     wp_localize_script('idoabroad_script', 'ajax_object', [
-//         'ajax_url' => admin_url('admin-ajax.php')
-//     ]);
-// }
-// add_action('wp_enqueue_scripts', 'listify_child_claimed_ribbon_script');
-
-
-// function listify_child_customize_register($wp_customize)
-// {
-
-//     $wp_customize->add_setting(
-//         'listing-single-rating-checkbox',
-//         array(
-//             'default'           => true, // Default: SHOW rating
-//             'sanitize_callback' => 'wp_validate_boolean',
-//         )
-//     );
-
-//     $wp_customize->add_control(
-//         'listing-single-rating-checkbox',
-//         array(
-//             'label'    => __('Show Rating on Single Listing', 'listify'),
-//             'type'     => 'checkbox',
-//             'section'  => 'single-listing',
-//             'priority' => 30,
-//         )
-//     );
-// }
-// add_action('customize_register', 'listify_child_customize_register');
-
-
-// add_action('wp_ajax_get_categories_by_region', 'get_categories_by_region');
-// add_action('wp_ajax_nopriv_get_categories_by_region', 'get_categories_by_region');
-
-// function get_categories_by_region()
-// {
-
-//     $region_id = isset($_POST['region_id']) ? intval($_POST['region_id']) : 0;
-
-//     if ($region_id === 0) {
-//         // get all job_listing posts
-//         $all_posts = get_posts([
-//             'post_type'      => 'job_listing',
-//             'posts_per_page' => -1
-//         ]);
-
-//         $category_counts = [];
-
-//         foreach ($all_posts as $post) {
-//             $terms = wp_get_post_terms($post->ID, 'job_listing_category');
-
-//             if (!empty($terms) && !is_wp_error($terms)) {
-//                 foreach ($terms as $t) {
-
-//                     if (!isset($category_counts[$t->term_id])) {
-//                         $category_counts[$t->term_id] = [
-//                             'name'  => $t->name,
-//                             'count' => 0
-//                         ];
-//                     }
-
-//                     $category_counts[$t->term_id]['count']++;
-//                 }
-//             }
-//         }
-
-//         // Build HTML
-//         $html = '<option value="0">All Categories</option>';
-
-//         foreach ($category_counts as $term_id => $data) {
-//             $html .= '<option value="' . $term_id . '">' . $data['name'] . ' (' . $data['count'] . ')</option>';
-//         }
-
-//         echo $html;
-//         wp_die();
-//     }
-
-
-//     // -------------------------------------------------
-//     // CASE 2: region_id > 0 → filter categories by region
-//     // -------------------------------------------------
-
-//     $args = [
-//         'post_type' => 'job_listing',
-//         'posts_per_page' => -1,
-//         'tax_query' => [
-//             [
-//                 'taxonomy' => 'job_listing_region',
-//                 'field'    => 'term_id',
-//                 'terms'    => $region_id
-//             ]
-//         ]
-//     ];
-
-//     $posts = get_posts($args);
-
-//     if (empty($posts)) {
-//         echo '<option value="">No category found</option>';
-//         wp_die();
-//     }
-
-//     $category_counts = [];
-
-//     foreach ($posts as $post) {
-//         $terms = wp_get_post_terms($post->ID, 'job_listing_category');
-
-//         if (!empty($terms) && !is_wp_error($terms)) {
-//             foreach ($terms as $t) {
-
-//                 if (!isset($category_counts[$t->term_id])) {
-//                     $category_counts[$t->term_id] = [
-//                         'name'  => $t->name,
-//                         'count' => 0
-//                     ];
-//                 }
-
-//                 $category_counts[$t->term_id]['count']++;
-//             }
-//         }
-//     }
-
-//     $html = '<option value="">Select Category</option>';
-
-//     foreach ($category_counts as $term_id => $data) {
-//         $html .= '<option value="' . $term_id . '">' . $data['name'] . ' (' . $data['count'] . ')</option>';
-//     }
-
-//     echo $html;
-//     wp_die();
-// }
-
-
-
-
-// add_filter('listify_wp_job_manager_filters_dropdown_category', 'add_category_counts', 10, 2);
-
-// function add_category_counts($dropdown_args, $atts)
-// {
-
-//     $dropdown_args['show_count'] = true;
-
-//     return $dropdown_args;
-// }
-
-// add_filter('listify_job_listing_region_dropdown_args', function ($args) {
-//     $args['hide_empty'] = true;
-//     return $args;
-// });
-
-
-
-
-            // add_filter('listify_listing_card_data', function ($data, $post) {
-
-            //     $data['post_id_gaurav'] = $post->ID;
-
-            //     if (function_exists('get_fields')) {
-            //         $data['acf'] = get_fields($post->ID);
-            //     }
-
-            //     return $data;
-            // }, 10, 2);
-
 
 /**
  * GP Settings - All ACF Options Page related functions
@@ -389,9 +96,10 @@ add_filter( 'job_manager_job_listing_data_fields', 'listify_child_featured_image
 function gp_register_footer_menus()
 {
     register_nav_menus([
-        'gp_footer_menu_1' => __('GP Footer Menu 1', 'gp'),
-        'gp_footer_menu_2' => __('GP Footer Menu 2', 'gp'),
-        'gp_footer_menu_3' => __('GP Footer Menu 3', 'gp'),
+        'gp_footer_menu_1' => __('Footer Menu 1', 'gp'),
+        'gp_footer_menu_2' => __('Footer Menu 2', 'gp'),
+        'gp_footer_menu_3' => __('Footer Menu 3', 'gp'),
+        'gp_footer_menu_4' => __('Footer Menu 5', 'gp'),
     ]);
 }
 
@@ -539,3 +247,32 @@ add_action('all', function ($hook) {
         error_log($hook);
     }
 });
+
+function load_swiper_assets()
+{
+    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], null, true);
+
+    wp_add_inline_script('swiper-js', "
+    new Swiper('.itinerary-swiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+
+    new Swiper('.inner-swiper', {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: { delay: 3000 }
+    });
+  ");
+}
+add_action('wp_enqueue_scripts', 'load_swiper_assets');

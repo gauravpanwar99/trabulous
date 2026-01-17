@@ -21,12 +21,19 @@
 				<div class="row">
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">International Trips</h3>
+						<?php
+						wp_nav_menu([
+							'theme_location' => 'gp_footer_menu_1',
+							'container'      => false,
+							'menu_class'     => 'gp-footer-menu',
+							'fallback_cb'    => false,
+						]);
+						?>
 						<ul class="gp-footer-menu">
 							<li><a href="https://trabulous.in/new/contact-us/">Europe</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Bali</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Vietnam</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Thailand</a></li>
-
 							<li><a href="https://trabulous.in/new/contact-us/">Kazakhstan</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Singapore</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Bhutan</a></li>
@@ -37,6 +44,14 @@
 					</div>
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">Domestic Trips</h3>
+						<?php
+						wp_nav_menu([
+							'theme_location' => 'gp_footer_menu_2',
+							'container'      => false,
+							'menu_class'     => 'gp-footer-menu',
+							'fallback_cb'    => false,
+						]);
+						?>
 						<ul class="gp-footer-menu">
 							<li><a href="https://trabulous.in/new/contact-us/">Ladakh</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Spiti Valley</a></li>
@@ -55,22 +70,35 @@
 				<div class="row">
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">Trabulous Special</h3>
+						<?php
+						wp_nav_menu([
+							'theme_location' => 'gp_footer_menu_3',
+							'container'      => false,
+							'menu_class'     => 'gp-footer-menu',
+							'fallback_cb'    => false,
+						]);
+						?>
 						<ul class="gp-footer-menu">
-							<li><a href="https://trabulous.in/new/contact-us/">Community Trips</a></li>
-							<!-- <li><a href="https://trabulous.in/new/contact-us/">Honeymoon Trips</a></li> -->
-							<li><a href="https://trabulous.in/new/contact-us/">Corporate Trips</a></li>
-							<!-- <li><a href="https://trabulous.in/new/contact-us/">Weekend Gataways</a></li> -->
 
+							<li><a href="https://trabulous.in/new/contact-us/">Community Trips</a></li>
+							<li><a href="https://trabulous.in/new/contact-us/">Corporate Trips</a></li>
 						</ul>
 					</div>
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">Quick Links</h3>
+						<?php
+						wp_nav_menu([
+							'theme_location' => 'gp_footer_menu_4',
+							'container'      => false,
+							'menu_class'     => 'gp-footer-menu',
+							'fallback_cb'    => false,
+						]);
+						?>
 						<ul class="gp-footer-menu">
 							<li><a href="https://trabulous.in/new/contact-us/">About Us</a></li>
 							<li><a href="https://trabulous.in/new/privacy-policy/">Privacy Policy</a></li>
 							<li><a href="https://trabulous.in/new/terms-conditions/">Terms & Conditions</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Customer Success</a></li>
-							<!-- <li><a href="https://trabulous.in/new/contact-us/">Disclaimer</a></li> -->
 							<li><a href="https://trabulous.in/new/careers/">Careers</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Blogs</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Payments</a></li>
