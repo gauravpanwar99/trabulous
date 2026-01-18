@@ -1,41 +1,52 @@
-<div class="itinerary-card">
+<div class="itinerary-card card">
 
-  <!-- IMAGE SLIDER -->
-  <div class="itinerary-images swiper inner-swiper">
-    <div class="swiper-wrapper">
-      <?php if (have_rows('gallery')): ?>
-        <?php while (have_rows('gallery')): the_row(); ?>
-          <div class="swiper-slide">
-            <img src="<?php the_sub_field('image'); ?>" />
-          </div>
-        <?php endwhile; ?>
-      <?php endif; ?>
+
+
+    <?php if (has_post_thumbnail()) : ?>
+
+        <div style="position:relative;height:200px;overflow:hidden">
+            <?php the_post_thumbnail('large', ['alt' => get_the_title()]); ?>
+        </div>
+
+
+    <?php endif; ?>
+
+    <!-- <div class="itinerary-body "> -->
+    <div class="card-body p-3 bg-white">
+        <h6 class="fw-bold mb-2"><?php the_title(); ?></h6>
+        <div class="card-meta small mb-3 d-flex align-items-center gap-1">
+            <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
+            <?php the_field('subtitle'); ?>
+        </div>
+
+        <?php
+        $highlights = get_field('highlights');
+        ?>
+        <ul class="highlights">
+            <?php foreach ($highlights as $highlight): ?>
+                <li class="highlights"><i class="bi bi-stars"></i><?php echo $highlight['highlight'] ?></li>
+            <?php endforeach ?>
+        </ul>
     </div>
-  </div>
+    <hr class="m-0">
+    <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
+        <div class="pricing-info">
+            <div class="fw-bold" style="font-size:14px"><s>₹<?php the_field('original_price'); ?></s></div>
+            <div class="fw-bold" style="font-size:22px">₹<?php the_field('deal_price'); ?></div>
+            <div class="small"><?php the_field('night_per_person');
+                                ?>
+            </div>
+        </div>
+        <div class="user-actions">
+            <i class="bi bi-telephone phone-icon"></i>
+            <?php
+            $contactPage = get_page_by_path('contact-us');
+            ?>
+            <a class="btn btn-coral open-pop-up-one" href="<?php echo get_permalink($contactPage->ID) ?>"><?php the_field('cta_text'); ?></a>
 
-  <!-- CONTENT -->
-  <div class="itinerary-body">
-    <h3><?php the_title(); ?></h3>
-    <p class="subtitle"><?php the_field('subtitle'); ?></p>
-
-    <p class="highlights"><?php the_field('highlights'); ?></p>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="itinerary-footer">
-    <div class="price-col">
-      <span class="old">₹<?php the_field('old_price'); ?></span>
-      <span class="new">₹<?php the_field('deal_price'); ?></span>
-
-      <div class="meta">
-        <span class="badge"><?php the_field('discount'); ?>% OFF</span>
-        <span class="duration"><?php the_field('duration'); ?></span>
-      </div>
+        </div>
     </div>
 
-    <div class="btn-col">
-      <a href="<?php the_permalink(); ?>" class="btn-view">View</a>
-    </div>
-  </div>
 
+    <!-- </div> -->
 </div>

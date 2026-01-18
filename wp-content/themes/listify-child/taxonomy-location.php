@@ -1,11 +1,14 @@
 <?php get_header(); ?>
 
-<!-- HERO -->
 <section class="location-hero">
-  <?php echo do_shortcode('[rev_slider alias="location-hero"]'); ?>
+  <?php
+  $term = get_queried_object();
+  $slider_alias = sanitize_title($term->name);
+
+  echo do_shortcode('[rev_slider alias="location-' . esc_attr($slider_alias) . '"]');
+  ?>
 </section>
 
-<!-- ITINERARY SLIDER -->
 <section class="location-itineraries">
   <div class="container">
     <h2 class="section-title"><?php single_term_title(); ?> Itineraries</h2>
@@ -37,14 +40,16 @@
             <?php get_template_part('template-parts/card-itinerary'); ?>
           </div>
 
-        <?php endwhile; wp_reset_postdata(); ?>
+        <?php endwhile;
+        wp_reset_postdata(); ?>
 
       </div>
 
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+
     </div>
   </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
 </section>
 
 <?php get_footer(); ?>

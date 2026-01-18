@@ -2,7 +2,7 @@
 Theme Name:     Listify Child
 Theme URI:      https://astoundify.com/products/listify/
 Template:       listify
-Version:        1.1.11
+Version:        1.1.12
 */
 
 
@@ -2507,8 +2507,8 @@ h2 {
 
 /* Hover */
 .itinerary-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  /* transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); */
 }
 
 /*IMAGE*/
@@ -4196,6 +4196,7 @@ Footer Styles Starts
   background-color: var(--tb-blue-dark);
 }
 
+/*
 .location-itineraries {
   padding: 80px 0;
 }
@@ -4204,7 +4205,7 @@ Footer Styles Starts
   background: #fff;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
 }
 
 .itinerary-images img {
@@ -4230,6 +4231,8 @@ Footer Styles Starts
 .highlights {
   margin-top: 10px;
   font-size: 14px;
+  padding: 0;
+  margin-left: 0;
 }
 
 .itinerary-footer {
@@ -4277,4 +4280,21 @@ Footer Styles Starts
   color: #fff;
   padding: 10px 18px;
   border-radius: 6px;
+}
+*/
+ul.highlights{
+  text-align: left;
+      margin: 0;
+    padding: 0;
+}
+ul.highlights li {
+  list-style: none;
+}
+
+.itinerary-body i.bi {
+  margin-right: 6px
+}
+
+.location-itineraries{
+  position: relative;
 }
