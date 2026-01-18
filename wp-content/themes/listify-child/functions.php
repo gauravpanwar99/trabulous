@@ -99,7 +99,7 @@ function gp_register_footer_menus()
         'gp_footer_menu_1' => __('Footer Menu 1', 'gp'),
         'gp_footer_menu_2' => __('Footer Menu 2', 'gp'),
         'gp_footer_menu_3' => __('Footer Menu 3', 'gp'),
-        'gp_footer_menu_4' => __('Footer Menu 5', 'gp'),
+        'gp_footer_menu_4' => __('Footer Menu 4', 'gp'),
     ]);
 }
 
