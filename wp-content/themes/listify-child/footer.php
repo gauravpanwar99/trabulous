@@ -29,7 +29,7 @@
 							'fallback_cb'    => false,
 						]);
 						?>
-						<ul class="gp-footer-menu">
+						<!-- <ul class="gp-footer-menu">
 							<li><a href="https://trabulous.in/new/contact-us/">Europe</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Bali</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Vietnam</a></li>
@@ -40,7 +40,7 @@
 							<li><a href="https://trabulous.in/new/contact-us/">Maldives</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Dubai</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Malaysia</a></li>
-						</ul>
+						</ul> -->
 					</div>
 					<div class="col-md-6">
 						<h3 class="gp-footer-menu-title">Domestic Trips</h3>
@@ -52,7 +52,7 @@
 							'fallback_cb'    => false,
 						]);
 						?>
-						<ul class="gp-footer-menu">
+						<!-- <ul class="gp-footer-menu">
 							<li><a href="https://trabulous.in/new/contact-us/">Ladakh</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Spiti Valley</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Meghalya</a></li>
@@ -62,7 +62,7 @@
 							<li><a href="https://trabulous.in/new/contact-us/">Kerala</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Rajasthan</a></li>
 							<li><a href="https://trabulous.in/new/contact-us/">Nagaland</a></li>
-						</ul>
+						</ul> -->
 					</div>
 				</div>
 			</div>
