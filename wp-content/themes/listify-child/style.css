@@ -3644,8 +3644,23 @@ Footer Styles Starts
 
 @media (max-width: 425px) {
   .testimonial-content {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.4;
+  }
+
+  .testimonial-name {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .cta-wrapper {
+    padding: 0;
+  }
+
+  .gp-footer {
+    /* background: var(--tb-blue-primary); */
+    padding-top: 0;
+    margin-top: 0;
   }
 
   .testimonial-location {
@@ -3694,6 +3709,7 @@ Footer Styles Starts
 @media (max-width: 768px) {
   .testimonial-card {
     margin-bottom: 16px;
+    height: 163px !important;
   }
 }
 
@@ -4013,6 +4029,40 @@ Footer Styles Starts
   .btn-coral {
     font-size: 15px;
   }
+
+  .primary-header .nav-menu.primary {
+    flex-direction: column;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header .menu,
+  .site-header .nav-menu-container {
+    display: flex;
+  }
+
+  .gp-hero-banner {
+    /* padding: 0 50px; */
+    height: 360px;
+    overflow: hidden;
+  }
+
+  .itinerary-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #banner-global-text-1 {
+    font-size: 18px !important;
+  }
+
+  #banner-global-text-2 {
+    font-size: 30px !important;
+  }
+
+  #banner-global-button-1 {
+    font-size: 14px !important;
+  }
 }
 
 /* ≤600px */
@@ -4282,11 +4332,12 @@ Footer Styles Starts
   border-radius: 6px;
 }
 */
-ul.highlights{
+ul.highlights {
   text-align: left;
-      margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 ul.highlights li {
   list-style: none;
 }
@@ -4295,6 +4346,6 @@ ul.highlights li {
   margin-right: 6px
 }
 
-.location-itineraries{
+.location-itineraries {
   position: relative;
 }
