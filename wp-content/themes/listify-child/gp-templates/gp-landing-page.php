@@ -25,7 +25,79 @@ get_header();
                 </div>
             </div>
             <div class="row justify-content-center g-3">
-                <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
+                <?php
+                $args = [
+                    'post_type'      => 'itinerary',
+                    'posts_per_page' => 3,
+                    'post_status'    => 'publish',
+                    'orderby'        => 'date',
+                    'order'          => 'DESC',
+                ];
+
+                $query = new WP_Query($args);
+                if ($query->have_posts()) :
+
+                    while ($query->have_posts()) : $query->the_post();
+                        $title    = get_the_title();
+                        $link     = get_permalink();
+                        $image    = get_the_post_thumbnail_url(get_the_ID(), 'large');
+                        $subtitle = get_field('subtitle'); // ACF field
+
+                        // Get location taxonomy
+                        $terms = get_the_terms(get_the_ID(), 'location');
+
+                        $location_link = '#';
+                        $location_name = '';
+
+                        if (!empty($terms) && !is_wp_error($terms)) {
+                            $term = $terms[0]; // first location
+                            $location_link = get_term_link($term);
+                            $location_name = $term->name;
+                        }
+
+                        $original_price = get_field('original_price'); // ACF field
+                        $deal_price = get_field('deal_price'); // ACF field
+                        $night_per_person = get_field('night_per_person'); // ACF field
+                        $cta_text = get_field('cta_text'); // ACF field
+                ?>
+
+                        <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
+                            <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
+                                <div style="position:relative;height:200px;overflow:hidden"><img alt="Couple Holiday: 4 Nights In Bangkok And Phuket" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo $image ?>"></div>
+                                <div class="card-body p-3 bg-white">
+                                    <h6 class="fw-bold mb-2"><?php echo $title ?></h6>
+                                    <div class="card-meta small mb-3 d-flex align-items-center gap-1">
+                                        <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
+                                        <?php echo $subtitle ?>
+                                    </div>
+
+                                </div>
+                                <hr class="m-0">
+                                <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
+                                    <div class="pricing-info">
+                                        <div class="fw-bold" style="font-size:14px"><s>₹<?php echo $original_price ?></s></div>
+                                        <div class="fw-bold" style="font-size:22px">₹<?php echo $deal_price ?></div>
+                                        <div class="small"><?php echo $night_per_person; ?></div>
+                                    </div>
+                                    <div class="user-actions">
+                                        <i class="bi bi-telephone phone-icon"></i>
+
+                                        <?php
+                                        $contactPage = get_page_by_path('contact-us');
+                                        ?>
+                                        <a class="btn btn-coral open-pop-up-one" href="<?php echo get_permalink($contactPage->ID) ?>">BOOK NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                <?php
+                    endwhile;
+                    wp_reset_postdata();
+                endif;
+                ?>
+
+                <!-- <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
                         <div style="position:relative;height:200px;overflow:hidden"><img alt="Couple Holiday: 4 Nights In Bangkok And Phuket" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/itineraries/1couple.jpg"></div>
                         <div class="card-body p-3 bg-white">
@@ -34,9 +106,7 @@ get_header();
                                 <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
                                 Kuta, Seminyak, Many more
                             </div>
-                            <!-- <div class="card-meta-badges">
-                                <span class="card-meta-badge">COUPLE FRIENDLY</span>
-                        </div> -->
+
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
@@ -55,8 +125,8 @@ get_header();
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
+                </div> -->
+                <!-- <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex">
                     <div class="card itinerary-card" style="transform: translateY(0px); box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;">
                         <div style="position:relative;height:200px;overflow:hidden"><img alt="Friends Retreat: 4 Nights In Bangkok And Pattaya" loading="lazy" decoding="async" data-nimg="fill" style="position: absolute; height: 100%; width: 100%; inset: 0px; object-fit: cover; color: transparent; transition: transform 0.4s; transform: scale(1);" src="<?php echo get_stylesheet_directory_uri() ?>/assets/itineraries/2.jpg"></div>
                         <div class="card-body p-3 bg-white">
@@ -66,9 +136,6 @@ get_header();
 
                                 Pattaya (3 Nights,4 Days) +1 more
                             </div>
-                            <!-- <div class="card-meta-badges">
-                                <span class="card-meta-badge">FRIENDS</span><span class="card-meta-badge">FAMILY</span>
-                            </div> -->
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
@@ -92,12 +159,8 @@ get_header();
                             <h6 class="fw-bold mb-2">Family Getaway: 11 Nights In Vietnam</h6>
                             <div class="card-meta small mb-3 d-flex align-items-center gap-1">
                                 <i class="bi bi-geo-alt me-1 geo-icon phone-icon"></i>
-
                                 Hanoi (5 Nights, 6 Days) +3 more
                             </div>
-                            <!-- <div class="card-meta-badges">
-                                <span class="card-meta-badge">FAMILY</span>
-                            </div> -->
                         </div>
                         <hr class="m-0">
                         <div class="card-footer d-flex justify-content-between align-items-center px-3 py-3" style="background:#F0F8FF">
@@ -113,7 +176,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -150,16 +213,9 @@ get_header();
 
 
     <section class="testimonials py-5 my-5">
-        <!-- <div class="testimonials-decor"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-chat-quote-fill chat-quote-decor">
-                <path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M7.194 6.766a1.7 1.7 0 0 0-.227-.272 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.5 2.5 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.5 2.5 0 0 0-.228-.4 1.7 1.7 0 0 0-.227-.273 1.5 1.5 0 0 0-.469-.324l-.008-.004A1.8 1.8 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"></path>
-            </svg></div> -->
+
         <div class="container-fluid">
-            <!-- <div class="text-center mb-5">
-                <h2 class="fw-bold title"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" class="bi bi-quote quote-inline">
-                        <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 9 7.558V11a1 1 0 0 0 1 1zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868 0-1.52.372a3.3 3.3 0 0 0-1.085.992 4.9 4.9 0 0 0-.62 1.458A7.7 7.7 0 0 0 3 7.558V11a1 1 0 0 0 1 1z"></path>
-                    </svg> What Our Travelers Say</h2>
-                <p class="sub-title text-muted mt-2">Trusted by thousands of happy travelers</p>
-            </div> -->
+
             <div class="testimonial-wrapper">
                 <div class="row g-4">
                     <div class="col-12 col-md-6 col-lg-3">
@@ -208,7 +264,7 @@ get_header();
                                 <p class="mb-4 testimonial-content">"<!-- -->Smooth booking process and very responsive support team.<!-- -->"</p>
                                 <div class="testimonial-meta">
                                     <div class="testimonial-name">- <!-- -->Anita</div>
-                                    <!-- <div class="testimonial-role">Solo Traveler</div> -->
+
                                 </div>
                                 <div class="testimonial-user"><img alt="Sophie L." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/sophie.png"></div>
                             </div>
@@ -231,7 +287,7 @@ get_header();
                                 <p class="mb-4 testimonial-content">"<!-- -->Highly professional service. Will book our next trip again!<!-- -->"</p>
                                 <div class="testimonial-meta">
                                     <div class="testimonial-name">- <!-- -->Kumar</div>
-                                    <!-- <div class="testimonial-role">Business Traveler</div> -->
+
                                 </div>
                                 <div class="testimonial-user"><img alt="James K." loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class="testimonial-user-img" style="color:transparent" src="<?php echo get_stylesheet_directory_uri() ?>/assets/testimonials/james.png"></div>
                             </div>
@@ -242,16 +298,12 @@ get_header();
         </div>
     </section>
 
+
     <!-- <section class="cta-wrapper">
         <?php
-        // echo do_shortcode('[rev_slider alias="slider-2"][/rev_slider]');
+        //echo do_shortcode('[rev_slider alias="slider-2-1"][/rev_slider]');
         ?>
     </section> -->
-    <section class="cta-wrapper">
-        <?php
-        echo do_shortcode('[rev_slider alias="slider-2-1"][/rev_slider]');
-        ?>
-    </section>
 </main>
 
 <?php get_footer(); ?>

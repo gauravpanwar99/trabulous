@@ -80,8 +80,8 @@
 						?>
 						<ul class="gp-footer-menu">
 
-							<li><a href="https://trabulous.in/new/contact-us/">Community Trips</a></li>
-							<li><a href="https://trabulous.in/new/contact-us/">Corporate Trips</a></li>
+							<li><a href="https://trabulous.in/contact-us/">Community Trips</a></li>
+							<li><a href="https://trabulous.in/contact-us/">Corporate Trips</a></li>
 						</ul>
 					</div>
 					<div class="col-md-6">
@@ -95,13 +95,13 @@
 						]);
 						?>
 						<ul class="gp-footer-menu">
-							<li><a href="https://trabulous.in/new/contact-us/">About Us</a></li>
-							<li><a href="https://trabulous.in/new/privacy-policy/">Privacy Policy</a></li>
-							<li><a href="https://trabulous.in/new/terms-conditions/">Terms & Conditions</a></li>
-							<li><a href="https://trabulous.in/new/contact-us/">Customer Success</a></li>
-							<li><a href="https://trabulous.in/new/careers/">Careers</a></li>
-							<li><a href="https://trabulous.in/new/contact-us/">Blogs</a></li>
-							<li><a href="https://trabulous.in/new/contact-us/">Payments</a></li>
+							<li><a href="https://trabulous.in/contact-us/">About Us</a></li>
+							<li><a href="https://trabulous.in/privacy-policy/">Privacy Policy</a></li>
+							<li><a href="https://trabulous.in/terms-conditions/">Terms & Conditions</a></li>
+							<li><a href="https://trabulous.in/contact-us/">Customer Success</a></li>
+							<li><a href="https://trabulous.in/careers/">Careers</a></li>
+							<li><a href="https://trabulous.in/contact-us/">Blogs</a></li>
+							<li><a href="https://trabulous.in/payments/">Payments</a></li>
 						</ul>
 					</div>
 				</div>
